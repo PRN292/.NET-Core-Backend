@@ -5798,19 +5798,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ironl\\.nuget\\packages\\": {}
+    "C:\\Users\\ACER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SE_Study\\21_Spring\\PRN292\\Project\\StrangerDetection\\StrangerDetection\\StrangerDetection.csproj",
+      "projectUniqueName": "D:\\Project C#\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj",
       "projectName": "StrangerDetection",
-      "projectPath": "D:\\SE_Study\\21_Spring\\PRN292\\Project\\StrangerDetection\\StrangerDetection\\StrangerDetection.csproj",
-      "packagesPath": "C:\\Users\\ironl\\.nuget\\packages\\",
-      "outputPath": "D:\\SE_Study\\21_Spring\\PRN292\\Project\\StrangerDetection\\StrangerDetection\\obj\\",
+      "projectPath": "D:\\Project C#\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj",
+      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+      "outputPath": "D:\\Project C#\\.NET_BackEnd\\StrangerDetection\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ironl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5869,7 +5869,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

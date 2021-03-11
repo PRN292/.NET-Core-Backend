@@ -14,10 +14,10 @@ namespace StrangerDetection.Models
         public string IdentificationCardFrontImageName { get; set; }
         public string IdentificationCardBackImageName { get; set; }
         public string ProfileImageName { get; set; }
-        public int? RoleId { get; set; }
+        public int RoleId { get; set; }
         public string KnownPersonId { get; set; }
         public bool? IsLogin { get; set; }
-        public bool? IsRememberMe { get; set; }
+        public bool? IsRemember { get; set; }
 
         public virtual TblKnownPerson KnownPerson { get; set; }
         public virtual TblRole Role { get; set; }
