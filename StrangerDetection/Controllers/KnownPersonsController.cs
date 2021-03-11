@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StrangerDetection.Helpers;
+using StrangerDetection.Helpers.Constant;
 using StrangerDetection.Models;
 using StrangerDetection.Models.Requests;
 using StrangerDetection.Models.Responses;
@@ -23,7 +24,7 @@ namespace StrangerDetection.Controllers
         }
 
 
-        [Authorize]
+        [Authorize(Constant.Role.ADMIN)]
         [HttpGet]
         public IActionResult GetAllKnownPersons()
         {
@@ -49,7 +50,7 @@ namespace StrangerDetection.Controllers
             return Ok(resultList);
         }
 
-        [Authorize]
+        [Authorize(Constant.Role.ADMIN)]
         [HttpGet("{email}")]
         public IActionResult GetKnownPersonByEmail(string email)
         {
@@ -70,7 +71,7 @@ namespace StrangerDetection.Controllers
             return Ok(response);
         }
 
-        [Authorize]
+        [Authorize(Constant.Role.ADMIN)]
         [HttpPatch]
         public IActionResult UpdateKnownPerson(UpdateKnownPersonRequest request)
         {
@@ -90,7 +91,7 @@ namespace StrangerDetection.Controllers
             return BadRequest();
         }
 
-        [Authorize]
+        [Authorize(Constant.Role.ADMIN)]
         [HttpPost]
         public IActionResult CreateKnownPerson(CreateKnownPersonRequest request)
         {
@@ -105,7 +106,7 @@ namespace StrangerDetection.Controllers
             return Ok();
         }
 
-        [Authorize]
+        [Authorize(Constant.Role.ADMIN)]
         [HttpDelete("{email}")]
         public IActionResult DeleteKnownPerson(string email)
         {
@@ -119,7 +120,7 @@ namespace StrangerDetection.Controllers
 
 
 
-        [Authorize]
+        [Authorize(Constant.Role.ADMIN)]
         [HttpDelete]
         [Route("Encodings")]
         public IActionResult DeleteEncodingByID(string ID)
@@ -127,7 +128,7 @@ namespace StrangerDetection.Controllers
             return Ok();
         }
 
-        [Authorize]
+        [Authorize(Constant.Role.ADMIN)]
         [HttpPost]
         [Route("Encodings")]
         public IActionResult CreateNewEncoding(CreateEncodingRequest request)
