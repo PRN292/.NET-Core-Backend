@@ -135,13 +135,7 @@ namespace StrangerDetection.Controllers
             return StatusCode(201);
         }
 
-        [Authorize]
-        [HttpDelete]
-        [Route("Encodings")]
-        public IActionResult DeleteEncoding(string ID)
-        {
-            return Ok();
-        }
+        
 
 
     }
