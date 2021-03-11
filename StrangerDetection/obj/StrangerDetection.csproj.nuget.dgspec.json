@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project C#\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj": {}
+    "D:\\SE_Study\\21_Spring\\PRN292\\Project\\StrangerDetection\\StrangerDetection\\StrangerDetection.csproj": {}
   },
   "projects": {
-    "D:\\Project C#\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj": {
+    "D:\\SE_Study\\21_Spring\\PRN292\\Project\\StrangerDetection\\StrangerDetection\\StrangerDetection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project C#\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj",
+        "projectUniqueName": "D:\\SE_Study\\21_Spring\\PRN292\\Project\\StrangerDetection\\StrangerDetection\\StrangerDetection.csproj",
         "projectName": "StrangerDetection",
-        "projectPath": "D:\\Project C#\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\Project C#\\.NET_BackEnd\\StrangerDetection\\obj\\",
+        "projectPath": "D:\\SE_Study\\21_Spring\\PRN292\\Project\\StrangerDetection\\StrangerDetection\\StrangerDetection.csproj",
+        "packagesPath": "C:\\Users\\ironl\\.nuget\\packages\\",
+        "outputPath": "D:\\SE_Study\\21_Spring\\PRN292\\Project\\StrangerDetection\\StrangerDetection\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ironl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }

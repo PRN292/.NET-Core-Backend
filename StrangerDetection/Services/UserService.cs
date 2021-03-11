@@ -24,7 +24,7 @@ namespace StrangerDetection.Services
 
         public bool CreateAccount(CreateAccountRequest model);
 
-        public List<GetAllAccountResponse> GetAllFullnameAndImage();
+        public List<AccountResponse> GetAllFullnameAndImage();
         object GetAnAccount(string username);
 
     }
@@ -83,19 +83,19 @@ namespace StrangerDetection.Services
         }
 
         //Get fullname and images of all accounts
-        public List<GetAllAccountResponse> GetAllFullnameAndImage()
+        public List<AccountResponse> GetAllFullnameAndImage()
         {
-            List<GetAllAccountResponse> resultList = null;
+            List<AccountResponse> resultList = null;
             List<TblAccount> accountList = GetAll();
             foreach (TblAccount account in accountList)
             {
                 if (resultList == null)
                 {
-                    resultList = new List<GetAllAccountResponse>();
+                    resultList = new List<AccountResponse>();
                 }
                 string fullname = account.Name;
                 string image = account.ProfileImageName;
-                GetAllAccountResponse resObj = new GetAllAccountResponse(fullname, image);
+                AccountResponse resObj = new AccountResponse(fullname, image);
                 resultList.Add(resObj);
             }
             return resultList;
