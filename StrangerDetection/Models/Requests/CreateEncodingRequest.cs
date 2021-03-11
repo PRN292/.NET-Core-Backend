@@ -7,7 +7,7 @@ namespace StrangerDetection.Models.Requests
 {
     public class CreateEncodingRequest
     {
-        public string knownPersonID { get; set; }
+        public string knownPersonEmail { get; set; }
         public string image { get; set; }
     }
 }

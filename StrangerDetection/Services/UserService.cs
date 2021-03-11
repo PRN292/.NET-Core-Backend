@@ -67,8 +67,7 @@ namespace StrangerDetection.Services
                     IdentificationCardFrontImageName = model.FrontIdentityImage,
                     IdentificationCardBackImageName = model.BackIdentityImage,
                     ProfileImageName = model.Image,
-                    RoleId = model.RoleID,
-                    KnownPersonId = model.KnowPersonId
+                    RoleId = model.RoleID
                 };
                 context.SaveChanges();
                 return true;
@@ -147,8 +146,8 @@ namespace StrangerDetection.Services
             if (model.Username.Trim().Length == 0 || model.Password.Trim().Length == 0 ||
                 model.FrontIdentityImage.Trim().Length == 0 ||
                 model.BackIdentityImage.Trim().Length == 0 ||
-                model.Image.Trim().Length == 0 ||
-                model.KnowPersonId.Trim().Length == 0) //except roleID (int)
+                model.Image.Trim().Length == 0
+                ) //except roleID (int)
             {
                 return false;
             }
