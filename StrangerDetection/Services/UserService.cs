@@ -26,11 +26,16 @@ namespace StrangerDetection.Services
 
         bool CreateAccount(CreateAccountRequest requestObj);
 
+<<<<<<< HEAD
         List<GetAccountsResponse> GetAllFullnameAndImage();
 
         bool UpdateAccount(UpdateAccountRequest requestObj);
 
         bool DeleteAccount(string username);
+=======
+        public List<AccountResponse> GetAllFullnameAndImage();
+        object GetAnAccount(string username);
+>>>>>>> 366b5cd93e32837ced9e9868d443f5e12674442a
 
     }
     public class UserService : IUserService
@@ -66,6 +71,7 @@ namespace StrangerDetection.Services
             {
                 TblAccount account = new TblAccount
                 {
+<<<<<<< HEAD
                     Username = reqObj.Username,
                     Password = reqObj.Password,
                     Address = reqObj.Address,
@@ -74,6 +80,16 @@ namespace StrangerDetection.Services
                     IdentificationCardBackImageName = reqObj.BackIdentityImage,
                     ProfileImageName = reqObj.Image,
                     RoleId = reqObj.RoleID
+=======
+                    Username = model.Username,
+                    Password = model.Password,
+                    Address = model.Address,
+                    Name = model.FullName,
+                    IdentificationCardFrontImageName = model.FrontIdentityImage,
+                    IdentificationCardBackImageName = model.BackIdentityImage,
+                    ProfileImageName = model.Image,
+                    RoleId = model.RoleID
+>>>>>>> 366b5cd93e32837ced9e9868d443f5e12674442a
                 };
                 context.TblAccounts.Add(account);
                 context.SaveChanges();
@@ -107,14 +123,23 @@ namespace StrangerDetection.Services
         }
 
         //Get fullname and images of all accounts
+<<<<<<< HEAD
         public List<GetAccountsResponse> GetAllFullnameAndImage()
         {
             List<GetAccountsResponse> result = null;
             List<TblAccount> query = (from x in context.TblAccounts select x).ToList();
             if (query != null)
+=======
+        public List<AccountResponse> GetAllFullnameAndImage()
+        {
+            List<AccountResponse> resultList = null;
+            List<TblAccount> accountList = GetAll();
+            foreach (TblAccount account in accountList)
+>>>>>>> 366b5cd93e32837ced9e9868d443f5e12674442a
             {
                 foreach (TblAccount account in query)
                 {
+<<<<<<< HEAD
                     string fullname = account.Name;
                     string image = account.ProfileImageName;
                     GetAccountsResponse resObj = new GetAccountsResponse(fullname, image);
@@ -125,6 +150,14 @@ namespace StrangerDetection.Services
                     result.Add(resObj);
                 }
                 return result;
+=======
+                    resultList = new List<AccountResponse>();
+                }
+                string fullname = account.Name;
+                string image = account.ProfileImageName;
+                AccountResponse resObj = new AccountResponse(fullname, image);
+                resultList.Add(resObj);
+>>>>>>> 366b5cd93e32837ced9e9868d443f5e12674442a
             }
             return null;
             //List<GetAccountsResponse> resultList = null;
@@ -198,8 +231,16 @@ namespace StrangerDetection.Services
         //Delete account
         public bool DeleteAccount(string username)
         {
+<<<<<<< HEAD
             var query = (from x in context.TblAccounts where x.Username == username select x).First();
             if (query != null)
+=======
+            if (model.Username.Trim().Length == 0 || model.Password.Trim().Length == 0 ||
+                model.FrontIdentityImage.Trim().Length == 0 ||
+                model.BackIdentityImage.Trim().Length == 0 ||
+                model.Image.Trim().Length == 0
+                ) //except roleID (int)
+>>>>>>> 366b5cd93e32837ced9e9868d443f5e12674442a
             {
                 context.TblAccounts.Remove(query);
                 context.SaveChanges();

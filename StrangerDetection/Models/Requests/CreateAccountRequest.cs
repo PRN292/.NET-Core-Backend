@@ -27,6 +27,10 @@ namespace StrangerDetection.Models.Requests
         [Required]
         public string BackIdentityImage { get; set; }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 366b5cd93e32837ced9e9868d443f5e12674442a
         //non - required fields (2 items)
         public string Address { get; set; }
 
