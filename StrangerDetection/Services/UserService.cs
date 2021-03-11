@@ -80,5 +80,15 @@ namespace StrangerDetection.Services
             }
             return false;
         }
+
+        public bool UpdateAccount(AccountRequest model)
+        {
+            var account = this.GetByUsername(model.Username);
+            if (account != null)
+            {
+                account.Address = model.Address;
+                account.IdentificationCardBackImageName = model
+            }
+        }
     }
 }

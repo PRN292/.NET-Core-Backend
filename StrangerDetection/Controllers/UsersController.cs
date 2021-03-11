@@ -10,7 +10,7 @@ using StrangerDetection.Helpers;
 
 namespace StrangerDetection.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
 
@@ -51,6 +51,11 @@ namespace StrangerDetection.Controllers
                 return Ok();
             }
             return BadRequest();
+        }
+
+        public IActionResult UpdateAccount(AccountRequest model)
+        {
+            
         }
 
     }
