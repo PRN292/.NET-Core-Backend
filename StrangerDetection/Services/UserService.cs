@@ -12,37 +12,26 @@ using System.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
-using StrangerDetection.Validators;
 
 namespace StrangerDetection.Services
 {
     public interface IUserService
     {
-        AuthenticationResponse Authenticate(AuthenticationRequest requestObj);
-        GetAccountResponse SearchAccountByUsername(string username);
-        TblAccount GetByUsername(string username);
-        List<TblAccount> GetAll();
-        bool LogoutUser(string username);
+        AuthenticationResponse Authenticate(AuthenticationRequest model);
+        public TblAccount GetByUsername(string username);
+        public List<TblAccount> GetAll();
+        public bool LogoutUser(string username);
 
-        bool CreateAccount(CreateAccountRequest requestObj);
+        public bool CreateAccount(CreateAccountRequest model);
 
-<<<<<<< HEAD
-        List<GetAccountsResponse> GetAllFullnameAndImage();
-
-        bool UpdateAccount(UpdateAccountRequest requestObj);
-
-        bool DeleteAccount(string username);
-=======
         public List<AccountResponse> GetAllFullnameAndImage();
         object GetAnAccount(string username);
->>>>>>> 366b5cd93e32837ced9e9868d443f5e12674442a
 
     }
     public class UserService : IUserService
     {
         private readonly AppSetting appSetting;
         private readonly StrangerDetectionContext context;
-        private readonly UserValidator validator;
 
         public UserService(IOptions<AppSetting> appSetting, StrangerDetectionContext context)
         {
@@ -51,10 +40,10 @@ namespace StrangerDetection.Services
         }
 
         //authenticate method
-        public AuthenticationResponse Authenticate(AuthenticationRequest reqObj)
+        public AuthenticationResponse Authenticate(AuthenticationRequest model)
         {
             var user = context.TblAccounts.Where(account =>
-            account.Username.Equals(reqObj.Username) && account.Password.Equals(reqObj.Password))
+            account.Username.Equals(model.Username) && account.Password.Equals(model.Password))
                 .FirstOrDefault();
             if (user == null) return null;
             var token = generateJwtToken(user);
@@ -65,22 +54,12 @@ namespace StrangerDetection.Services
         }
 
         //Create Account
-        public bool CreateAccount(CreateAccountRequest reqObj)
+        public bool CreateAccount(CreateAccountRequest model)
         {
-            if (validator.ValidationRequestObjForCreateAccount(reqObj))
+            if (ValidationRequestObj(model))
             {
                 TblAccount account = new TblAccount
                 {
-<<<<<<< HEAD
-                    Username = reqObj.Username,
-                    Password = reqObj.Password,
-                    Address = reqObj.Address,
-                    Name = reqObj.FullName,
-                    IdentificationCardFrontImageName = reqObj.FrontIdentityImage,
-                    IdentificationCardBackImageName = reqObj.BackIdentityImage,
-                    ProfileImageName = reqObj.Image,
-                    RoleId = reqObj.RoleID
-=======
                     Username = model.Username,
                     Password = model.Password,
                     Address = model.Address,
@@ -89,27 +68,7 @@ namespace StrangerDetection.Services
                     IdentificationCardBackImageName = model.BackIdentityImage,
                     ProfileImageName = model.Image,
                     RoleId = model.RoleID
->>>>>>> 366b5cd93e32837ced9e9868d443f5e12674442a
                 };
-                context.TblAccounts.Add(account);
-                context.SaveChanges();
-                return true;
-            }
-            return false;
-        }
-
-        //update account
-        public bool UpdateAccount(UpdateAccountRequest obj)
-        {
-            var query = (from x in context.TblAccounts where x.Username == obj.Username select x).First();
-            if (query != null)
-            {
-                query.ProfileImageName = obj.Image;
-                query.Password = obj.Password;
-                query.Name = obj.Fullname;
-                query.Address = obj.Address;
-                query.IdentificationCardFrontImageName = obj.FrontIdentity;
-                query.IdentificationCardBackImageName = obj.BackIdentity;
                 context.SaveChanges();
                 return true;
             }
@@ -123,81 +82,34 @@ namespace StrangerDetection.Services
         }
 
         //Get fullname and images of all accounts
-<<<<<<< HEAD
-        public List<GetAccountsResponse> GetAllFullnameAndImage()
-        {
-            List<GetAccountsResponse> result = null;
-            List<TblAccount> query = (from x in context.TblAccounts select x).ToList();
-            if (query != null)
-=======
         public List<AccountResponse> GetAllFullnameAndImage()
         {
             List<AccountResponse> resultList = null;
             List<TblAccount> accountList = GetAll();
             foreach (TblAccount account in accountList)
->>>>>>> 366b5cd93e32837ced9e9868d443f5e12674442a
             {
-                foreach (TblAccount account in query)
+                if (resultList == null)
                 {
-<<<<<<< HEAD
-                    string fullname = account.Name;
-                    string image = account.ProfileImageName;
-                    GetAccountsResponse resObj = new GetAccountsResponse(fullname, image);
-                    if (result == null)
-                    {
-                        result = new List<GetAccountsResponse>();
-                    }
-                    result.Add(resObj);
-                }
-                return result;
-=======
                     resultList = new List<AccountResponse>();
                 }
                 string fullname = account.Name;
                 string image = account.ProfileImageName;
                 AccountResponse resObj = new AccountResponse(fullname, image);
                 resultList.Add(resObj);
->>>>>>> 366b5cd93e32837ced9e9868d443f5e12674442a
             }
-            return null;
-            //List<GetAccountsResponse> resultList = null;
-            //List<TblAccount> accountList = GetAll();
-            //foreach (TblAccount account in accountList)
-            //{
-            //    if (resultList == null)
-            //    {
-            //        resultList = new List<GetAccountsResponse>();
-            //    }
-            //    string fullname = account.Name;
-            //    string image = account.ProfileImageName;
-            //    GetAccountsResponse resObj = new GetAccountsResponse(fullname, image);
-            //    resultList.Add(resObj);
-            //}
-            //return resultList;
+            return resultList;
         }
 
+        //Get an account
+        public object GetAnAccount(string username)
+        {
+            return null;
+        }
 
         //Get account by username
         public TblAccount GetByUsername(string username)
         {
-            TblAccount account = context.TblAccounts.Where(x => x.Username.Equals(username)).FirstOrDefault();
-            if (account != null)
-            {
-                return account;
-            }
-            return null;
-        }
-
-        public GetAccountResponse SearchAccountByUsername(string username)
-        {
-            var query = (from x in context.TblAccounts where x.Username == username select x).First();
-            if (query != null)
-            {
-                GetAccountResponse resObj = new GetAccountResponse(query.Username, query.ProfileImageName, query.RoleId, query.Password,
-                query.Name, query.Address, query.IdentificationCardFrontImageName, query.IdentificationCardBackImageName);
-                return resObj;
-            }
-            return null;
+            return context.TblAccounts.Where(x => x.Username.Equals(username)).FirstOrDefault();
         }
 
         //logout
@@ -228,25 +140,29 @@ namespace StrangerDetection.Services
             return toenHandler.WriteToken(token);
         }
 
-        //Delete account
-        public bool DeleteAccount(string username)
+        //validation
+        private bool ValidationRequestObj(CreateAccountRequest model)
         {
-<<<<<<< HEAD
-            var query = (from x in context.TblAccounts where x.Username == username select x).First();
-            if (query != null)
-=======
             if (model.Username.Trim().Length == 0 || model.Password.Trim().Length == 0 ||
                 model.FrontIdentityImage.Trim().Length == 0 ||
                 model.BackIdentityImage.Trim().Length == 0 ||
                 model.Image.Trim().Length == 0
                 ) //except roleID (int)
->>>>>>> 366b5cd93e32837ced9e9868d443f5e12674442a
             {
-                context.TblAccounts.Remove(query);
-                context.SaveChanges();
-                return true;
+                return false;
             }
-            return false;
+            return true;
         }
+
+
+        //public bool UpdateAccount(AccountRequest model)
+        //{
+        //    var account = this.GetByUsername(model.Username);
+        //    if (account != null)
+        //    {
+        //        account.Address = model.Address;
+        //        account.IdentificationCardBackImageName = model
+        //    }
+        //}
     }
 }
