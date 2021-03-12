@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using StrangerDetection.Models.Requests;
 using StrangerDetection.Helpers;
 using System.Net;
-using StrangerDetection.Models.Responses;
 
 namespace StrangerDetection.Controllers
 {
@@ -26,19 +25,19 @@ namespace StrangerDetection.Controllers
         [HttpPost("login")]
         public IActionResult Authenticate(AuthenticationRequest model)
         {
-            AuthenticationResponse response = userService.Authenticate(model);
-            if (response != null)
+            var response = userService.Authenticate(model);
+            if (response == null)
             {
-                return Ok(response);
+                return BadRequest(new { message = "Username or Password incorrect" });
             }
-            return BadRequest(new { message = "Username or Password incorrect" });
+            return Ok(response);
         }
 
         [Authorize]
         [HttpGet]
         public IActionResult GetAll()
         {
-            List<GetAccountsResponse> response = userService.GetAllFullnameAndImage();
+            var response = userService.GetAllFullnameAndImage();
             if (response != null)
             {
                 return Ok(response);
@@ -48,14 +47,14 @@ namespace StrangerDetection.Controllers
 
         [Authorize]
         [HttpGet("logout")]
-        public IActionResult Logout(string username)
+        public IActionResult Logout(String username)
         {
-            bool result = userService.LogoutUser(username);
+            var result = userService.LogoutUser(username);
             if (result)
             {
                 return Ok();
             }
-            return BadRequest(new { message = "Logout failed"});
+            return BadRequest();
         }
 
         [Authorize]
@@ -67,44 +66,36 @@ namespace StrangerDetection.Controllers
             {
                 return StatusCode(201);
             }
-            return BadRequest(new  { message = "Create account failed" });
+            return BadRequest();
         }
 
         [Authorize]
-        [HttpGet("{username}")]
+        [HttpGet("getaccount")]
         public IActionResult GetAccount(string username)
         {
-            GetAccountResponse result = userService.SearchAccountByUsername(username);
+            var result = userService.GetAnAccount(username);
             if (result != null)
             {
-                return Ok(result);
-            }
-            return BadRequest(new { message = "Account doesn't exist"});
-        }
-
-        [Authorize]
-        [HttpPatch]
-        public IActionResult UpdateAccount(UpdateAccountRequest obj)
-        {
-            bool result = userService.UpdateAccount(obj);
-            if (result)
-            {
                 return Ok();
             }
-            return BadRequest(new {message ="Account doesn't exist. Update failed" });
+            return BadRequest();
         }
 
-        [Authorize]
-        [HttpDelete]
-        public IActionResult DeleteAccount(string username)
-        {
-            bool result = userService.DeleteAccount(username);
-            if (result)
-            {
-                return Ok();
-            }
-            return BadRequest(new { message = "Account doesn't exist. Delete Failed" });
-        }
+        //[Authorize]
+        //[HttpPatch("update")]
+        //public IActionResult UpdateAccount(UpdateAccountRequest obj)
+        //{
+        //    var result = UserService.SelfUpdateAccount(obj);
+        //    if (result)
+        //    {
+        //        return Ok();
+        //    }
+        //    return BadRequest();
+        //}
+
+        //[Authorize]
+        //[HttpDelete("delete")]
+        //public 
 
     }
 

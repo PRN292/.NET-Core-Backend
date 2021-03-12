@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StrangerDetection.Models.Requests
 {
-    public class GetAccountRequest
+    public class GetAnAccountRequest
     {
         [Required]
         public string Username { get; set; }
