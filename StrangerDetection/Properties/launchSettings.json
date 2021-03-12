@@ -23,7 +23,8 @@
       "launchUrl": "",
       "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "GOOGLE_APPLICATION_CREDENTIALS": "Firebase Admin Key/strangerdetection-firebase-adminsdk-ndswy-678c270870.json"
       }
     }
   }
