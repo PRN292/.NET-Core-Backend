@@ -54,6 +54,8 @@ namespace StrangerDetection.Helpers
                 var jwtToken = (JwtSecurityToken)validatedToken;
                 var username = jwtToken.Claims.First(x=> x.Type == "username").Value;
                 context.Items["User"] = userService.GetByUsername(username);
+                //return 403 if token is expired => how to get expired date?
+                //var exp = jwtToken.Claims.First(x => x.)
 
             }
             catch
