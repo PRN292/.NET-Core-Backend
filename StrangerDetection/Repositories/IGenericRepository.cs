@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using StrangerDetection.Helpers;
 
 namespace StrangerDetection.Repositories
 {
@@ -6,5 +8,8 @@ namespace StrangerDetection.Repositories
     {
         Task<T> GetById(object id);
         void Create(T obj);
+        void Remove(object id);
+        T Update(T obj);
+        Task<List<T>> GetAll();
     }
 }
