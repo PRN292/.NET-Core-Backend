@@ -27,6 +27,7 @@ namespace StrangerDetection.Services
             string uuid = System.Guid.NewGuid().ToString();
             //TODO: call Python GRPC server and create encdoing
             //and get image_name and save it to database
+            //Hello Sonw
             TblEncoding encoding = new TblEncoding
             {
                 Id = uuid,
