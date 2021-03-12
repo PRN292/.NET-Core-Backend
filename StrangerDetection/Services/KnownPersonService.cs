@@ -53,7 +53,8 @@ namespace StrangerDetection.Services
 
         public TblKnownPerson GetKnownPersonByEmail(string email)
         {
-            return context.TblKnownPeople.Where(p => p.Email.Equals(email))
+            return context.TblKnownPeople.AsQueryable()
+                .Where(p => p.Email.Equals(email))
                 .Include(p => p.TblEncodings)
                 .FirstOrDefault();
         }

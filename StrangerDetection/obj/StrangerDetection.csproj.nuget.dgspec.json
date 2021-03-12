@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Clone_C#Project\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj": {}
+    "D:\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj": {}
   },
   "projects": {
-    "D:\\Clone_C#Project\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj": {
+    "D:\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Clone_C#Project\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj",
+        "projectUniqueName": "D:\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj",
         "projectName": "StrangerDetection",
-        "projectPath": "D:\\Clone_C#Project\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\Clone_C#Project\\.NET_BackEnd\\StrangerDetection\\obj\\",
+        "projectPath": "D:\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj",
+        "packagesPath": "C:\\Users\\ironl\\.nuget\\packages\\",
+        "outputPath": "D:\\.NET_BackEnd\\StrangerDetection\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ironl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Google.Cloud.Firestore": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.3, )"
@@ -73,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }

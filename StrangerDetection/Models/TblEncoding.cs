@@ -9,9 +9,8 @@ namespace StrangerDetection.Models
     {
         public string Id { get; set; }
         public string ImageName { get; set; }
-        public string Encodings { get; set; }
-        public string KnownPersonId { get; set; }
+        public string KnownPersonEmail { get; set; }
 
-        public virtual TblKnownPerson KnownPerson { get; set; }
+        public virtual TblKnownPerson KnownPersonEmailNavigation { get; set; }
     }
 }

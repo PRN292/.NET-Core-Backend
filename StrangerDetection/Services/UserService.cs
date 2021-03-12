@@ -3,7 +3,6 @@ using StrangerDetection.Models.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using StrangerDetection.Helpers;
 using Microsoft.Extensions.Options;
 using StrangerDetection.Models;
@@ -65,7 +64,7 @@ namespace StrangerDetection.Services
         //login
         public AuthenticationResponse Authenticate(AuthenticationRequest reqObj)
         {
-            var user = context.TblAccounts.Where(account =>
+            var user = context.TblAccounts.AsQueryable().Where(account =>
             account.Username.Equals(reqObj.Username) && account.Password.Equals(reqObj.Password))
                 .FirstOrDefault();
             if (user == null) return null;
@@ -102,7 +101,7 @@ namespace StrangerDetection.Services
         //update account
         public bool UpdateAccount(UpdateAccountRequest obj)
         {
-            var query = (from x in context.TblAccounts where x.Username == obj.Username select x).First();
+            var query = (from x in context.TblAccounts.AsQueryable() where x.Username == obj.Username select x).First();
             if (query != null)
             {
                 query.ProfileImageName = obj.Image;
@@ -120,7 +119,7 @@ namespace StrangerDetection.Services
         public List<GetAccountsResponse> GetAllFullnameAndImage()
         {
             List<GetAccountsResponse> result = null;
-            List<TblAccount> query = (from x in context.TblAccounts select x).ToList();
+            List<TblAccount> query = (from x in context.TblAccounts.AsQueryable() select x).ToList();
             if (query != null)
             {
                 foreach (TblAccount account in query)
@@ -142,7 +141,7 @@ namespace StrangerDetection.Services
         //Get account by username => return TblAccount
         public TblAccount GetByUsername(string username)
         {
-            TblAccount account = context.TblAccounts.Where(x => x.Username.Equals(username)).FirstOrDefault();
+            TblAccount account = context.TblAccounts.AsQueryable().Where(x => x.Username.Equals(username)).FirstOrDefault();
             if (account != null)
             {
                 return account;
@@ -152,7 +151,7 @@ namespace StrangerDetection.Services
         //get account by username => return GetAccountResponse
         public GetAccountResponse SearchAccountByUsername(string username)
         {
-            var query = (from x in context.TblAccounts where x.Username == username select x).First();
+            var query = (from x in context.TblAccounts.AsQueryable() where x.Username == username select x).First();
             if (query != null)
             {
                 GetAccountResponse resObj = new GetAccountResponse(query.Username, query.ProfileImageName, query.RoleId, query.Password,
@@ -165,7 +164,7 @@ namespace StrangerDetection.Services
         //Delete account
         public bool DeleteAccount(string username)
         {
-            var query = (from x in context.TblAccounts where x.Username == username select x).First();
+            var query = (from x in context.TblAccounts.AsQueryable() where x.Username == username select x).First();
             if (query != null)
             {
                 context.TblAccounts.Remove(query);
@@ -184,7 +183,7 @@ namespace StrangerDetection.Services
         //log out 
         public bool LogoutUser(string username)
         {
-            var query = (from x in context.TblAccounts where x.Username == username && x.IsLogin == true select x).First();
+            var query = (from x in context.TblAccounts.AsQueryable() where x.Username == username && x.IsLogin == true select x).First();
             if (query != null)
             {
                 query.IsLogin = false;
