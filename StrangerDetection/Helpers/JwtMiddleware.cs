@@ -24,10 +24,12 @@ namespace StrangerDetection.Helpers
 
         public async Task Invoke(HttpContext context, IUserService userService)
         {
+            //Describe how to get JWT Token From Header
             var token = context
                 .Request
                 .Headers["Authorization"]
                 .FirstOrDefault()?.Split(" ").Last();
+
             if (token != null)
             {
                 attachUserToContext(context, userService, token);
@@ -54,14 +56,12 @@ namespace StrangerDetection.Helpers
                 var jwtToken = (JwtSecurityToken)validatedToken;
                 var username = jwtToken.Claims.First(x=> x.Type == "username").Value;
                 context.Items["User"] = userService.GetByUsername(username);
-                //return 403 if token is expired => how to get expired date?
-                //var exp = jwtToken.Claims.First(x => x.)
-
             }
             catch
             {
 
             }
         }
+
     }
 }
