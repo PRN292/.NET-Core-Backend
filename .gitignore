@@ -366,3 +366,4 @@ StrangerDetection/obj/project.nuget.cache
 *.dll
 obj/
 StrangerDetection/bin/Debug/netcoreapp3.1/
+StrangerDetection/obj/
