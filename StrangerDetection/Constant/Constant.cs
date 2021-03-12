@@ -7,5 +7,7 @@ namespace StrangerDetection.Constant
 {
     public static class Constant
     {
+        public const int ADMIN = 1;
+        public const int SECURITY_PERSONNEL = 0;
     }
 }

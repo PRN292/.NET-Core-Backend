@@ -55,7 +55,7 @@ namespace StrangerDetection.Controllers
             {
                 return Ok();
             }
-            return BadRequest(new { message = "Logout failed"});
+            return BadRequest(new { message = "Logout failed" });
         }
 
         [Authorize]
@@ -67,19 +67,19 @@ namespace StrangerDetection.Controllers
             {
                 return StatusCode(201);
             }
-            return BadRequest(new  { message = "Create account failed" });
+            return BadRequest(new { message = "Create account failed" });
         }
 
         [Authorize]
         [HttpGet("{username}")]
         public IActionResult GetAccount(string username)
         {
-            GetAccountResponse result = userService.SearchAccountByUsername(username);
+            var result = userService.SearchAccountByUsername(username);
             if (result != null)
             {
-                return Ok(result);
+                return Ok();
             }
-            return BadRequest(new { message = "Account doesn't exist"});
+            return BadRequest(new { message = "Account doesn't exist" });
         }
 
         [Authorize]
@@ -91,7 +91,7 @@ namespace StrangerDetection.Controllers
             {
                 return Ok();
             }
-            return BadRequest(new {message ="Account doesn't exist. Update failed" });
+            return BadRequest(new { message = "Account doesn't exist. Update failed" });
         }
 
         [Authorize]

@@ -39,7 +39,5 @@ namespace StrangerDetection.Models.Responses
             this.FrontIdentityImage = frontIdentity;
             this.BackIdentityImage = backIdentity;
         }
-
-
     }
 }

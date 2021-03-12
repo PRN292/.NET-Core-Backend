@@ -13,16 +13,11 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using StrangerDetection.Services;
 using StrangerDetection.Helpers;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Diagnostics;
-using System.IO;
 
 namespace StrangerDetection
 {
     public class Startup
     {
-        private const string LOCAL_ERROR = "/error-local-development";
-        private const string RELEASE_ERROR = "/error";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -34,7 +29,6 @@ namespace StrangerDetection
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddCors();
             services.Configure<AppSetting>(Configuration.GetSection("AppSettings"));
             services.AddDbContext<StrangerDetectionContext>(
                 options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -49,19 +43,8 @@ namespace StrangerDetection
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseExceptionHandler("/error");
-            }
-            app.UseCors(x => x
-                .AllowAnyOrigin()
-                .AllowAnyMethod()
-                .AllowAnyHeader());
 
             app.UseRouting();
-
-            //Handling exceptions
-            app.UseStatusCodePages();
 
             app.UseMiddleware<JwtMiddleware>();
 

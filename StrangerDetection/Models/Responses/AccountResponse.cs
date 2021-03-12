@@ -5,14 +5,13 @@ using System.Threading.Tasks;
 
 namespace StrangerDetection.Models.Responses
 {
-    public class AccountResponse
+
+    public class GetAllAccountResponse
     {
         public string Fullname { get; set; }
 
         public string Image { get; set; }
-
-
-        public AccountResponse(string fullname, string image)
+        public GetAllAccountResponse(string fullname, string image)
         {
             this.Fullname = fullname;
             this.Image = image;

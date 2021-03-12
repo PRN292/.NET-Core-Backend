@@ -22,6 +22,5 @@ namespace StrangerDetection.Models.Requests
         public string FrontIdentity { get; set; }
 
         public string BackIdentity { get; set; }
-
     }
 }
