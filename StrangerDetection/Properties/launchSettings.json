@@ -24,7 +24,7 @@
       "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "GOOGLE_APPLICATION_CREDENTIALS": "D:\\.NET_BackEnd\\StrangerDetection\\Firebase Admin Key\\strangerdetection-firebase-adminsdk-ndswy-678c270870.json"
+        "GOOGLE_APPLICATION_CREDENTIALS": "Firebase Admin Key/strangerdetection-firebase-adminsdk-ndswy-678c270870.json"
       }
     }
   }
