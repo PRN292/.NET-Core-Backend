@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StrangerDetection.Helpers;
-using StrangerDetection.Helpers.Constant;
 using StrangerDetection.Models;
 using StrangerDetection.Models.Requests;
 using StrangerDetection.Models.Responses;
