@@ -359,7 +359,7 @@ MigrationBackup/
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio
 .vs/StrangerDetection/v16/.suo
-StrangerDetection/obj/project.nuget.cache
+
 *.cache
 *.cache
 *.pdb
