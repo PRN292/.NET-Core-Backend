@@ -32,7 +32,7 @@ namespace StrangerDetection.Services
             {
                 Id = uuid,
                 ImageName = image,
-                KnownPersonEmail = user_email
+                //KnownPersonEmail = user_email
             };
             context.Add<TblEncoding>(encoding);
             context.SaveChanges();

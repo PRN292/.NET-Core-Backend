@@ -20,7 +20,6 @@ namespace StrangerDetection.Models
         public virtual DbSet<TblAccount> TblAccounts { get; set; }
         public virtual DbSet<TblEncoding> TblEncodings { get; set; }
         public virtual DbSet<TblKnownPerson> TblKnownPeople { get; set; }
-        public virtual DbSet<TblNotificaton> TblNotificatons { get; set; }
         public virtual DbSet<TblRole> TblRoles { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -28,7 +27,7 @@ namespace StrangerDetection.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=NATTON\\NATTON;Initial Catalog=StrangerDetection;User Id=sa;Password=123");
+                optionsBuilder.UseSqlServer("Server=LAPTOP-0CVMQNN3\\SQLEXPRESS1;Initial Catalog=StrangerDetection;User Id=sa;Password=123456");
             }
         }
 
@@ -39,7 +38,7 @@ namespace StrangerDetection.Models
             modelBuilder.Entity<TblAccount>(entity =>
             {
                 entity.HasKey(e => e.Username)
-                    .HasName("PK__TblAccou__F3DBC573D741E41B");
+                    .HasName("PK__TblAccou__F3DBC573B34A9EBE");
 
                 entity.ToTable("TblAccount");
 
@@ -67,10 +66,10 @@ namespace StrangerDetection.Models
 
                 entity.Property(e => e.IsRemember).HasColumnName("isRemember");
 
-                entity.Property(e => e.KnownPersonEmail)
-                    .HasMaxLength(320)
+                entity.Property(e => e.KnownPersonId)
+                    .HasMaxLength(32)
                     .IsUnicode(false)
-                    .HasColumnName("knownPersonEmail");
+                    .HasColumnName("knownPersonID");
 
                 entity.Property(e => e.Name)
                     .IsRequired()
@@ -91,16 +90,16 @@ namespace StrangerDetection.Models
 
                 entity.Property(e => e.RoleId).HasColumnName("roleID");
 
-                entity.HasOne(d => d.KnownPersonEmailNavigation)
+                entity.HasOne(d => d.KnownPerson)
                     .WithMany(p => p.TblAccounts)
-                    .HasForeignKey(d => d.KnownPersonEmail)
-                    .HasConstraintName("FK_TblAccount_TblKnownPerson");
+                    .HasForeignKey(d => d.KnownPersonId)
+                    .HasConstraintName("FK__TblAccoun__known__2C3393D0");
 
                 entity.HasOne(d => d.Role)
                     .WithMany(p => p.TblAccounts)
                     .HasForeignKey(d => d.RoleId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__TblAccoun__roleI__3E52440B");
+                    .HasConstraintName("FK__TblAccoun__roleI__2B3F6F97");
             });
 
             modelBuilder.Entity<TblEncoding>(entity =>
@@ -110,6 +109,11 @@ namespace StrangerDetection.Models
                     .IsUnicode(false)
                     .HasColumnName("ID");
 
+                entity.Property(e => e.Encodings)
+                    .IsRequired()
+                    .IsUnicode(false)
+                    .HasColumnName("encodings");
+
                 entity.Property(e => e.ImageName)
                     .IsRequired()
                     .HasMaxLength(40)
@@ -117,34 +121,36 @@ namespace StrangerDetection.Models
                     .HasColumnName("image_name")
                     .IsFixedLength(true);
 
-                entity.Property(e => e.KnownPersonEmail)
+                entity.Property(e => e.KnownPersonId)
                     .IsRequired()
-                    .HasMaxLength(320)
+                    .HasMaxLength(32)
                     .IsUnicode(false)
-                    .HasColumnName("knownPersonEmail");
+                    .HasColumnName("knownPersonID");
 
-                entity.HasOne(d => d.KnownPersonEmailNavigation)
+                entity.HasOne(d => d.KnownPerson)
                     .WithMany(p => p.TblEncodings)
-                    .HasForeignKey(d => d.KnownPersonEmail)
+                    .HasForeignKey(d => d.KnownPersonId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_TblEncodings_TblKnownPerson");
+                    .HasConstraintName("FK__TblEncodi__known__286302EC");
             });
 
             modelBuilder.Entity<TblKnownPerson>(entity =>
             {
-                entity.HasKey(e => e.Email)
-                    .HasName("PK__TblKnown__3214EC27C479A1A9");
-
                 entity.ToTable("TblKnownPerson");
+
+                entity.Property(e => e.Id)
+                    .HasMaxLength(32)
+                    .IsUnicode(false)
+                    .HasColumnName("ID");
+
+                entity.Property(e => e.Address)
+                    .HasMaxLength(200)
+                    .HasColumnName("address");
 
                 entity.Property(e => e.Email)
                     .HasMaxLength(320)
                     .IsUnicode(false)
                     .HasColumnName("email");
-
-                entity.Property(e => e.Address)
-                    .HasMaxLength(200)
-                    .HasColumnName("address");
 
                 entity.Property(e => e.Name)
                     .IsRequired()
@@ -155,25 +161,6 @@ namespace StrangerDetection.Models
                     .HasMaxLength(10)
                     .IsUnicode(false)
                     .HasColumnName("phoneNumber")
-                    .IsFixedLength(true);
-            });
-
-            modelBuilder.Entity<TblNotificaton>(entity =>
-            {
-                entity.ToTable("TblNotificaton");
-
-                entity.Property(e => e.Id)
-                    .HasMaxLength(32)
-                    .IsUnicode(false)
-                    .HasColumnName("ID");
-
-                entity.Property(e => e.CreateTime).HasColumnName("createTime");
-
-                entity.Property(e => e.ImageName)
-                    .IsRequired()
-                    .HasMaxLength(40)
-                    .IsUnicode(false)
-                    .HasColumnName("image_name")
                     .IsFixedLength(true);
             });
 
