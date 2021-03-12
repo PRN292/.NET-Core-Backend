@@ -364,3 +364,6 @@ StrangerDetection/obj/project.nuget.cache
 *.cache
 *.pdb
 *.dll
+
+
+StrangerDetection/obj/
