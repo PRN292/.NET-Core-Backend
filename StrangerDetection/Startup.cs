@@ -10,6 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FirebaseAdmin;
+using Google.Apis.Auth.OAuth2;
 using Microsoft.EntityFrameworkCore;
 using StrangerDetection.Services;
 using StrangerDetection.Helpers;
@@ -21,6 +23,11 @@ namespace StrangerDetection
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            FirebaseApp.Create(new AppOptions()
+            {
+                Credential = GoogleCredential.GetApplicationDefault(),
+                
+            });
         }
 
         public IConfiguration Configuration { get; }
@@ -29,6 +36,7 @@ namespace StrangerDetection
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors();
             services.Configure<AppSetting>(Configuration.GetSection("AppSettings"));
             services.AddDbContext<StrangerDetectionContext>(
                 options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -43,7 +51,10 @@ namespace StrangerDetection
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
             app.UseRouting();
 
             app.UseMiddleware<JwtMiddleware>();
