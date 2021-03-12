@@ -23,11 +23,13 @@ namespace StrangerDetection
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            //Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "Firebase Admin Key\\strangerdetection-firebase-adminsdk-ndswy-371433d43f.json");
             FirebaseApp.Create(new AppOptions()
             {
                 Credential = GoogleCredential.GetApplicationDefault(),
                 
             });
+            
         }
 
         public IConfiguration Configuration { get; }

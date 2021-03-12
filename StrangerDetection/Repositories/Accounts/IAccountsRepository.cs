@@ -4,9 +4,8 @@ using StrangerDetection.Models;
 
 namespace StrangerDetection.Repositories.impl
 {
-    public interface IUsersRepository
+    public interface IAccountsRepository
     {
-        public AppSetting AppSetting { get; }
         public Task<TblAccount> GetUserByUsername(string username);
         
     }

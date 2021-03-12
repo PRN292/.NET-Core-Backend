@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using StrangerDetection.Repositories.impl;
 
 namespace StrangerDetection.Services
 {
@@ -20,6 +21,7 @@ namespace StrangerDetection.Services
         public EncodingService(StrangerDetectionContext context)
         {
             this.context = context;
+            
         }
 
         public bool CreateEncoding(string user_email, string image)
