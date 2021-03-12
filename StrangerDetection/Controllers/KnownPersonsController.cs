@@ -16,9 +16,11 @@ namespace StrangerDetection.Controllers
     public class KnownPersonsController : Controller
     {
         private IKnownPersonService personService;
+        private IEncodingService encodingService;
 
-        public KnownPersonsController(IKnownPersonService personService)
+        public KnownPersonsController(IKnownPersonService personService, IEncodingService encodingService)
         {
+            this.encodingService = encodingService;
             this.personService = personService;
         }
 
@@ -128,11 +130,17 @@ namespace StrangerDetection.Controllers
         }
 
         [Authorize(Constant.Role.ADMIN)]
-        [HttpPost]
-        [Route("Encodings")]
+        [HttpPost("encodings")]
         public IActionResult CreateNewEncoding(CreateEncodingRequest request)
         {
-            return StatusCode(201);
+            //TODO: validate request
+            bool result = encodingService.CreateEncoding(request.knownPersonEmail, request.image);
+            if (result)
+            {
+                return StatusCode(201);
+            }
+            return BadRequest();
+            
         }
 
         

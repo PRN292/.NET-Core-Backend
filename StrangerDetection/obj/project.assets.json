@@ -164,10 +164,10 @@
           "lib/netstandard2.0/Google.LongRunning.dll": {}
         }
       },
-      "Google.Protobuf/3.13.0": {
+      "Google.Protobuf/3.15.6": {
         "type": "package",
         "dependencies": {
-          "System.Memory": "4.5.2",
+          "System.Memory": "4.5.3",
           "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "compile": {
@@ -229,7 +229,7 @@
           }
         }
       },
-      "Grpc.Core.Api/2.31.0": {
+      "Grpc.Core.Api/2.35.0": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -239,6 +239,39 @@
         },
         "runtime": {
           "lib/netstandard2.0/Grpc.Core.Api.dll": {}
+        }
+      },
+      "Grpc.Net.Client/2.35.0": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Net.Common": "2.35.0",
+          "Microsoft.Extensions.Logging.Abstractions": "3.0.3",
+          "System.Diagnostics.DiagnosticSource": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/Grpc.Net.Client.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Grpc.Net.Client.dll": {}
+        }
+      },
+      "Grpc.Net.Common/2.35.0": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Core.Api": "2.35.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Grpc.Net.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Grpc.Net.Common.dll": {}
+        }
+      },
+      "Grpc.Tools/2.36.1": {
+        "type": "package",
+        "build": {
+          "build/Grpc.Tools.props": {},
+          "build/Grpc.Tools.targets": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -1924,14 +1957,14 @@
         "lib/netstandard2.0/Google.LongRunning.xml"
       ]
     },
-    "Google.Protobuf/3.13.0": {
-      "sha512": "/6VgKCh0P59x/rYsBkCvkUanF0TeUYzwV9hzLIWgt23QRBaKHoxaaMkidEWhKibLR88c3PVCXyyrx9Xlb+Ne6w==",
+    "Google.Protobuf/3.15.6": {
+      "sha512": "GDqEK8/gwUJWJGIwJqXwrwEAjBv1opPmDMBz3zjNvzzDFDO8C7hc3DgUTgE5v5FeVWtZYF7ykSBbKRo0hdu02A==",
       "type": "package",
-      "path": "google.protobuf/3.13.0",
+      "path": "google.protobuf/3.15.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "google.protobuf.3.13.0.nupkg.sha512",
+        "google.protobuf.3.15.6.nupkg.sha512",
         "google.protobuf.nuspec",
         "lib/net45/Google.Protobuf.dll",
         "lib/net45/Google.Protobuf.pdb",
@@ -1998,14 +2031,14 @@
         "runtimes/win/native/grpc_csharp_ext.x86.dll"
       ]
     },
-    "Grpc.Core.Api/2.31.0": {
-      "sha512": "UbCva42tB1EMJTVzlectfHfz25HD9T04HBlm3PA+m93yK48FxyKi7lC72yiKt/Hi3dpESYxh8CksM8a8GJpFAA==",
+    "Grpc.Core.Api/2.35.0": {
+      "sha512": "3ZpDzd5iMRBUv22hcvBqhL1yFFNfa9AccG8koco0ezbO/NMt3E0GsTf1BeIZ2G6ceFZR3fEMawpiJAlXhDEpQA==",
       "type": "package",
-      "path": "grpc.core.api/2.31.0",
+      "path": "grpc.core.api/2.35.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "grpc.core.api.2.31.0.nupkg.sha512",
+        "grpc.core.api.2.35.0.nupkg.sha512",
         "grpc.core.api.nuspec",
         "lib/net45/Grpc.Core.Api.dll",
         "lib/net45/Grpc.Core.Api.pdb",
@@ -2016,6 +2049,88 @@
         "lib/netstandard2.0/Grpc.Core.Api.dll",
         "lib/netstandard2.0/Grpc.Core.Api.pdb",
         "lib/netstandard2.0/Grpc.Core.Api.xml"
+      ]
+    },
+    "Grpc.Net.Client/2.35.0": {
+      "sha512": "/MOsv7Q963F/jgjSId03DLBExMA+0n2/k5N9TIW8xmaHdnRRE6UJWw4nbZhpoNrroqVoxVY1k2xUYNsLw8zaGQ==",
+      "type": "package",
+      "path": "grpc.net.client/2.35.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "grpc.net.client.2.35.0.nupkg.sha512",
+        "grpc.net.client.nuspec",
+        "lib/net5.0/Grpc.Net.Client.dll",
+        "lib/net5.0/Grpc.Net.Client.pdb",
+        "lib/net5.0/Grpc.Net.Client.xml",
+        "lib/netstandard2.1/Grpc.Net.Client.dll",
+        "lib/netstandard2.1/Grpc.Net.Client.pdb",
+        "lib/netstandard2.1/Grpc.Net.Client.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.Net.Common/2.35.0": {
+      "sha512": "Xs5Uuvx+oV8qLbiy3dRWmLwbsRsedsHe/b3E2SPgggksfk2fTXpq65a78YiLuDWf4ZgahjaAnwHhYekV/Dptyw==",
+      "type": "package",
+      "path": "grpc.net.common/2.35.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "grpc.net.common.2.35.0.nupkg.sha512",
+        "grpc.net.common.nuspec",
+        "lib/net5.0/Grpc.Net.Common.dll",
+        "lib/net5.0/Grpc.Net.Common.pdb",
+        "lib/net5.0/Grpc.Net.Common.xml",
+        "lib/netstandard2.1/Grpc.Net.Common.dll",
+        "lib/netstandard2.1/Grpc.Net.Common.pdb",
+        "lib/netstandard2.1/Grpc.Net.Common.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.Tools/2.36.1": {
+      "sha512": "kYlIQl+XZKcgIDOXLpgiF521YDrricFnFCce2gyzuzPC/C85wyGWtUw6X/AQxqHaX+1pEXBd7iMrsZup3+Cl8w==",
+      "type": "package",
+      "path": "grpc.tools/2.36.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Grpc.Tools.props",
+        "build/Grpc.Tools.targets",
+        "build/_grpc/Grpc.CSharp.xml",
+        "build/_grpc/_Grpc.Tools.props",
+        "build/_grpc/_Grpc.Tools.targets",
+        "build/_protobuf/Google.Protobuf.Tools.props",
+        "build/_protobuf/Google.Protobuf.Tools.targets",
+        "build/_protobuf/Protobuf.CSharp.xml",
+        "build/_protobuf/net45/Protobuf.MSBuild.dll",
+        "build/_protobuf/net45/Protobuf.MSBuild.pdb",
+        "build/_protobuf/netstandard1.3/Protobuf.MSBuild.dll",
+        "build/_protobuf/netstandard1.3/Protobuf.MSBuild.pdb",
+        "build/native/Grpc.Tools.props",
+        "build/native/include/google/protobuf/any.proto",
+        "build/native/include/google/protobuf/api.proto",
+        "build/native/include/google/protobuf/descriptor.proto",
+        "build/native/include/google/protobuf/duration.proto",
+        "build/native/include/google/protobuf/empty.proto",
+        "build/native/include/google/protobuf/field_mask.proto",
+        "build/native/include/google/protobuf/source_context.proto",
+        "build/native/include/google/protobuf/struct.proto",
+        "build/native/include/google/protobuf/timestamp.proto",
+        "build/native/include/google/protobuf/type.proto",
+        "build/native/include/google/protobuf/wrappers.proto",
+        "grpc.tools.2.36.1.nupkg.sha512",
+        "grpc.tools.nuspec",
+        "tools/linux_x64/grpc_csharp_plugin",
+        "tools/linux_x64/protoc",
+        "tools/linux_x86/grpc_csharp_plugin",
+        "tools/linux_x86/protoc",
+        "tools/macosx_x64/grpc_csharp_plugin",
+        "tools/macosx_x64/protoc",
+        "tools/windows_x64/grpc_csharp_plugin.exe",
+        "tools/windows_x64/protoc.exe",
+        "tools/windows_x86/grpc_csharp_plugin.exe",
+        "tools/windows_x86/protoc.exe"
       ]
     },
     "Humanizer.Core/2.8.26": {
@@ -6107,30 +6222,35 @@
     ".NETCoreApp,Version=v3.1": [
       "FirebaseAdmin >= 2.0.0",
       "Google.Cloud.Firestore >= 2.3.0",
+      "Google.Protobuf >= 3.15.6",
+      "Grpc.Net.Client >= 2.35.0",
+      "Grpc.Tools >= 2.36.1",
       "Microsoft.EntityFrameworkCore >= 5.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.3"
     ]
   },
   "packageFolders": {
-    "/Users/bangmaple/.nuget/packages/": {}
+    "C:\\Users\\ironl\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bangmaple/NET_backend/StrangerDetection/StrangerDetection.csproj",
+      "projectUniqueName": "D:\\SE_Study\\21_Spring\\PRN292\\Project\\StrangerDetection\\StrangerDetection\\StrangerDetection.csproj",
       "projectName": "StrangerDetection",
-      "projectPath": "/Users/bangmaple/NET_backend/StrangerDetection/StrangerDetection.csproj",
-      "packagesPath": "/Users/bangmaple/.nuget/packages/",
-      "outputPath": "/Users/bangmaple/NET_backend/StrangerDetection/obj/",
+      "projectPath": "D:\\SE_Study\\21_Spring\\PRN292\\Project\\StrangerDetection\\StrangerDetection\\StrangerDetection.csproj",
+      "packagesPath": "C:\\Users\\ironl\\.nuget\\packages\\",
+      "outputPath": "D:\\SE_Study\\21_Spring\\PRN292\\Project\\StrangerDetection\\StrangerDetection\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/bangmaple/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\ironl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6156,6 +6276,20 @@
           "Google.Cloud.Firestore": {
             "target": "Package",
             "version": "[2.3.0, )"
+          },
+          "Google.Protobuf": {
+            "target": "Package",
+            "version": "[3.15.6, )"
+          },
+          "Grpc.Net.Client": {
+            "target": "Package",
+            "version": "[2.35.0, )"
+          },
+          "Grpc.Tools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.36.1, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -6190,7 +6324,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.200/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }

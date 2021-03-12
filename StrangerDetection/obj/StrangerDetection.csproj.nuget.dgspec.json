@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bangmaple/NET_backend/StrangerDetection/StrangerDetection.csproj": {}
+    "D:\\SE_Study\\21_Spring\\PRN292\\Project\\StrangerDetection\\StrangerDetection\\StrangerDetection.csproj": {}
   },
   "projects": {
-    "/Users/bangmaple/NET_backend/StrangerDetection/StrangerDetection.csproj": {
+    "D:\\SE_Study\\21_Spring\\PRN292\\Project\\StrangerDetection\\StrangerDetection\\StrangerDetection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bangmaple/NET_backend/StrangerDetection/StrangerDetection.csproj",
+        "projectUniqueName": "D:\\SE_Study\\21_Spring\\PRN292\\Project\\StrangerDetection\\StrangerDetection\\StrangerDetection.csproj",
         "projectName": "StrangerDetection",
-        "projectPath": "/Users/bangmaple/NET_backend/StrangerDetection/StrangerDetection.csproj",
-        "packagesPath": "/Users/bangmaple/.nuget/packages/",
-        "outputPath": "/Users/bangmaple/NET_backend/StrangerDetection/obj/",
+        "projectPath": "D:\\SE_Study\\21_Spring\\PRN292\\Project\\StrangerDetection\\StrangerDetection\\StrangerDetection.csproj",
+        "packagesPath": "C:\\Users\\ironl\\.nuget\\packages\\",
+        "outputPath": "D:\\SE_Study\\21_Spring\\PRN292\\Project\\StrangerDetection\\StrangerDetection\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/bangmaple/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ironl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,6 +47,20 @@
             "Google.Cloud.Firestore": {
               "target": "Package",
               "version": "[2.3.0, )"
+            },
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.15.6, )"
+            },
+            "Grpc.Net.Client": {
+              "target": "Package",
+              "version": "[2.35.0, )"
+            },
+            "Grpc.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.36.1, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -79,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }

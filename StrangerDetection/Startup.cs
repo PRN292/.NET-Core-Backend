@@ -22,6 +22,7 @@ namespace StrangerDetection
     {
         public Startup(IConfiguration configuration)
         {
+            System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "Firebase Admin Key\\strangerdetection-firebase-adminsdk-ndswy-678c270870.json");
             Configuration = configuration;
             FirebaseApp.Create(new AppOptions()
             {
@@ -42,6 +43,8 @@ namespace StrangerDetection
                 options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IKnownPersonService, KnownPersonService> ();
+            services.AddScoped<IEncodingService, EncodingService>();
+            services.AddScoped<GRPCClient>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
