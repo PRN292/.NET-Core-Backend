@@ -77,7 +77,7 @@ namespace StrangerDetection.Controllers
             var result = userService.SearchAccountByUsername(username);
             if (result != null)
             {
-                return Ok();
+                return Ok(result);
             }
             return BadRequest(new { message = "Account doesn't exist" });
         }
@@ -89,19 +89,19 @@ namespace StrangerDetection.Controllers
             bool result = userService.UpdateAccount(obj);
             if (result)
             {
-                return Ok();
+                return Ok("Updated!");
             }
             return BadRequest(new { message = "Account doesn't exist. Update failed" });
         }
 
         [Authorize]
-        [HttpDelete]
+        [HttpDelete("{username}")]
         public IActionResult DeleteAccount(string username)
         {
             bool result = userService.DeleteAccount(username);
             if (result)
             {
-                return Ok();
+                return Ok("Deleted!");
             }
             return BadRequest(new { message = "Account doesn't exist. Delete Failed" });
         }

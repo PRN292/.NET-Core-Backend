@@ -9,7 +9,7 @@ namespace StrangerDetection.Validators
     public class UserValidator
     {
         //validation
-        public bool ValidationRequestObjForCreateAccount(CreateAccountRequest model)
+        public static bool ValidationRequestObjForCreateAccount(CreateAccountRequest model)
         {
             if (model.Username.Trim().Length == 0 || model.Password.Trim().Length == 0 ||
                 model.FrontIdentityImage.Trim().Length == 0 ||

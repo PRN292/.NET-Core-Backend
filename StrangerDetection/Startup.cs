@@ -56,6 +56,7 @@ namespace StrangerDetection
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseStatusCodePages();
             app.UseCors(x => x
                 .AllowAnyOrigin()
                 .AllowAnyMethod()

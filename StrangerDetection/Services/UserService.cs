@@ -78,7 +78,7 @@ namespace StrangerDetection.Services
         //Create Account
         public bool CreateAccount(CreateAccountRequest reqObj)
         {
-            if (validator.ValidationRequestObjForCreateAccount(reqObj))
+            if (UserValidator.ValidationRequestObjForCreateAccount(reqObj) && !IsUsernameExisted(reqObj.Username))
             {
                 TblAccount account = new TblAccount
                 {
@@ -98,18 +98,28 @@ namespace StrangerDetection.Services
             return false;
         }
 
+        private bool IsUsernameExisted(string username)
+        {
+            TblAccount account = GetByUsername(username);
+            if (account != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
         //update account
         public bool UpdateAccount(UpdateAccountRequest obj)
         {
-            var query = (from x in context.TblAccounts.AsQueryable() where x.Username == obj.Username select x).First();
-            if (query != null)
+            TblAccount account = context.TblAccounts.AsQueryable().Where(x => x.Username.Equals(obj.Username)).FirstOrDefault();
+            if (account != null)
             {
-                query.ProfileImageName = obj.Image;
-                query.Password = obj.Password;
-                query.Name = obj.Fullname;
-                query.Address = obj.Address;
-                query.IdentificationCardFrontImageName = obj.FrontIdentity;
-                query.IdentificationCardBackImageName = obj.BackIdentity;
+                account.ProfileImageName = obj.Image;
+                account.Password = obj.Password;
+                account.Name = obj.Fullname;
+                account.Address = obj.Address;
+                account.IdentificationCardFrontImageName = obj.FrontIdentity;
+                account.IdentificationCardBackImageName = obj.BackIdentity;
                 context.SaveChanges();
                 return true;
             }
@@ -119,10 +129,10 @@ namespace StrangerDetection.Services
         public List<GetAccountsResponse> GetAllFullnameAndImage()
         {
             List<GetAccountsResponse> result = null;
-            List<TblAccount> query = (from x in context.TblAccounts.AsQueryable() select x).ToList();
-            if (query != null)
+            List<TblAccount> accountList = context.TblAccounts.AsQueryable().ToList();
+            if (accountList != null)
             {
-                foreach (TblAccount account in query)
+                foreach (TblAccount account in accountList)
                 {
                     string fullname = account.Name;
                     string image = account.ProfileImageName;
@@ -151,11 +161,11 @@ namespace StrangerDetection.Services
         //get account by username => return GetAccountResponse
         public GetAccountResponse SearchAccountByUsername(string username)
         {
-            var query = (from x in context.TblAccounts.AsQueryable() where x.Username == username select x).First();
-            if (query != null)
+            TblAccount account = context.TblAccounts.AsQueryable().Where(x => x.Username.Equals(username)).FirstOrDefault();
+            if (account != null)
             {
-                GetAccountResponse resObj = new GetAccountResponse(query.Username, query.ProfileImageName, query.RoleId, query.Password,
-                query.Name, query.Address, query.IdentificationCardFrontImageName, query.IdentificationCardBackImageName);
+                GetAccountResponse resObj = new GetAccountResponse(account.Username, account.ProfileImageName, account.RoleId, account.Password,
+                account.Name, account.Address, account.IdentificationCardFrontImageName, account.IdentificationCardBackImageName);
                 return resObj;
             }
             return null;
@@ -164,10 +174,10 @@ namespace StrangerDetection.Services
         //Delete account
         public bool DeleteAccount(string username)
         {
-            var query = (from x in context.TblAccounts.AsQueryable() where x.Username == username select x).First();
-            if (query != null)
+            TblAccount account = context.TblAccounts.AsQueryable().Where(x => x.Username.Equals(username)).FirstOrDefault();
+            if (account != null)
             {
-                context.TblAccounts.Remove(query);
+                context.TblAccounts.Remove(account);
                 context.SaveChanges();
                 return true;
             }
@@ -183,10 +193,10 @@ namespace StrangerDetection.Services
         //log out 
         public bool LogoutUser(string username)
         {
-            var query = (from x in context.TblAccounts.AsQueryable() where x.Username == username && x.IsLogin == true select x).First();
-            if (query != null)
+            TblAccount account = context.TblAccounts.AsQueryable().Where(x => x.Username.Equals(username)).FirstOrDefault();
+            if (account != null)
             {
-                query.IsLogin = false;
+                account.IsLogin = false;
                 context.SaveChanges();
                 return true;
             }
