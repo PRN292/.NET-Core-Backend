@@ -3,7 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore; 
+using Microsoft.EntityFrameworkCore;
+using StrangerDetection.Validators;
 
 namespace StrangerDetection.Services
 {
@@ -29,9 +30,13 @@ namespace StrangerDetection.Services
         }
         public bool CreateKnownPerson(TblKnownPerson person)
         {
-            this.context.Add<TblKnownPerson>(person);
-            context.SaveChanges();
-            return true;
+            if (KnowPersonValidator.ValidateCreateKnowPersonRequestObj(person.Name, person.Email))
+            {
+                this.context.Add<TblKnownPerson>(person);
+                context.SaveChanges();
+                return true;
+            }
+            return false;
         }
 
         public bool DeleteKnownPerson(string email)
@@ -62,7 +67,7 @@ namespace StrangerDetection.Services
         public bool UpdateKnownPerson(TblKnownPerson person)
         {
             TblKnownPerson exsitedPerson = context.TblKnownPeople.FirstOrDefault(p => p.Email.Equals(person.Email));
-            if (exsitedPerson != null)
+            if (exsitedPerson != null && KnowPersonValidator.ValidateCreateKnowPersonRequestObj(person.Name, person.Email))
             {
                 exsitedPerson.Address = person.Address;
                 exsitedPerson.Email = person.Email;

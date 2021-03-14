@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Grpc.Core;
 using Grpc.Net.Client;
 using GrpcImage;
+using StrangerDetection.Validators;
 
 namespace StrangerDetection.Services
 {
@@ -30,17 +31,21 @@ namespace StrangerDetection.Services
 
         public bool CreateEncoding(string user_email, string image)
         {
-            string uuid = System.Guid.NewGuid().ToString();
-            CreateEncodingReply grpcReply =  gRPCClient.CreateEncoding(user_email, image);
-            TblEncoding encoding = new TblEncoding
+            if (EncodingValidator.ValidateCreateEncodingRequest(user_email, image))
             {
-                Id = uuid,
-                ImageName = grpcReply.ImageName,
-                KnownPersonEmail = user_email
-            };
-            context.Add<TblEncoding>(encoding);
-            context.SaveChanges();
-            return true;
+                string uuid = System.Guid.NewGuid().ToString();
+                CreateEncodingReply grpcReply = gRPCClient.CreateEncoding(user_email, image);
+                TblEncoding encoding = new TblEncoding
+                {
+                    Id = uuid,
+                    ImageName = grpcReply.ImageName,
+                    KnownPersonEmail = user_email
+                };
+                context.Add<TblEncoding>(encoding);
+                context.SaveChanges();
+                return true;
+            }
+            return false;
         }
 
         public bool DeleteEncoding(string ID)
