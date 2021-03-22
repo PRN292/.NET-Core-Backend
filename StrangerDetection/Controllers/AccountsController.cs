@@ -34,7 +34,7 @@ namespace StrangerDetection.Controllers
             return BadRequest(new { message = "Username or Password incorrect" });
         }
 
-        [Authorize]
+        [Authorize(Constant.Role.ADMIN)]
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -46,7 +46,7 @@ namespace StrangerDetection.Controllers
             return BadRequest();
         }
 
-        [Authorize]
+        [Authorize(Constant.Role.ADMIN)]
         [HttpGet("logout")]
         public IActionResult Logout(string username)
         {
@@ -58,7 +58,7 @@ namespace StrangerDetection.Controllers
             return BadRequest(new { message = "Logout failed" });
         }
 
-        [Authorize]
+        [Authorize(Constant.Role.ADMIN)]
         [HttpPost]
         public IActionResult Create(CreateAccountRequest obj)
         {
@@ -70,7 +70,7 @@ namespace StrangerDetection.Controllers
             return BadRequest(new { message = "Create account failed" });
         }
 
-        [Authorize]
+        [Authorize(Constant.Role.ADMIN)]
         [HttpGet("{username}")]
         public IActionResult GetAccount(string username)
         {
@@ -82,7 +82,7 @@ namespace StrangerDetection.Controllers
             return BadRequest(new { message = "Account doesn't exist" });
         }
 
-        [Authorize]
+        [Authorize(Constant.Role.ADMIN)]
         [HttpPatch]
         public IActionResult UpdateAccount(UpdateAccountRequest obj)
         {
@@ -94,7 +94,7 @@ namespace StrangerDetection.Controllers
             return BadRequest(new { message = "Account doesn't exist. Update failed" });
         }
 
-        [Authorize]
+        [Authorize(Constant.Role.ADMIN)]
         [HttpDelete("{username}")]
         public IActionResult DeleteAccount(string username)
         {

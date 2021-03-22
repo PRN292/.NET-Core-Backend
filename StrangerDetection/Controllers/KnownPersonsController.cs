@@ -4,6 +4,7 @@ using StrangerDetection.Models;
 using StrangerDetection.Models.Requests;
 using StrangerDetection.Models.Responses;
 using StrangerDetection.Services;
+using StrangerDetection.Validators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +40,8 @@ namespace StrangerDetection.Controllers
                     //TODO: get image base64 from firebase
                     encodingResponses.Add(new EncodingResponse { ID = e.Id, image = e.ImageName });
                 });
-                resultList.Add(new KnownPersonResponse {
+                resultList.Add(new KnownPersonResponse
+                {
                     address = s.Address,
                     email = s.Email,
                     name = s.Name,
@@ -62,7 +64,8 @@ namespace StrangerDetection.Controllers
                 //TODO: get image base64 from firebase
                 encodingResponses.Add(new EncodingResponse { ID = e.Id, image = e.ImageName });
             });
-            KnownPersonResponse response = new KnownPersonResponse {
+            KnownPersonResponse response = new KnownPersonResponse
+            {
                 email = knownPerson.Email,
                 address = knownPerson.Address,
                 name = knownPerson.Name,
@@ -77,18 +80,23 @@ namespace StrangerDetection.Controllers
         public IActionResult UpdateKnownPerson(UpdateKnownPersonRequest request)
         {
             //TODO: validate request
-            TblKnownPerson newPerson = new TblKnownPerson
+            if (KnowPersonValidator.ValidateUpdateKnowPersonRequestObj(request))
             {
-                Address = request.address,
-                Email = request.email,
-                Name = request.name,
-                PhoneNumber = request.phoneNumber
-            };
-            bool result = personService.UpdateKnownPerson(newPerson);
-            if (result)
-            {
-                return Ok();
+                //
+                TblKnownPerson newPerson = new TblKnownPerson
+                {
+                    Address = request.address,
+                    Email = request.email,
+                    Name = request.name,
+                    PhoneNumber = request.phoneNumber
+                };
+                bool result = personService.UpdateKnownPerson(newPerson);
+                if (result)
+                {
+                    return Ok();
+                }
             }
+
             return BadRequest();
         }
 
@@ -96,15 +104,21 @@ namespace StrangerDetection.Controllers
         [HttpPost]
         public IActionResult CreateKnownPerson(CreateKnownPersonRequest request)
         {
-            TblKnownPerson newPerson = new TblKnownPerson
+            //TODO: validate request
+            if (KnowPersonValidator.ValidateCreateKnowPersonRequestObj(request))
             {
-                Address = request.address,
-                Email = request.email,
-                Name = request.name,
-                PhoneNumber = request.phoneNumber
-            };
-            bool result = personService.CreateKnownPerson(newPerson);
-            return Ok();
+                TblKnownPerson newPerson = new TblKnownPerson
+                {
+                    Address = request.address,
+                    Email = request.email,
+                    Name = request.name,
+                    PhoneNumber = request.phoneNumber
+                };
+                bool result = personService.CreateKnownPerson(newPerson);
+                return Ok(result);
+            }
+            return BadRequest();
+
         }
 
         [Authorize(Constant.Role.ADMIN)]
@@ -134,16 +148,20 @@ namespace StrangerDetection.Controllers
         public IActionResult CreateNewEncoding(CreateEncodingRequest request)
         {
             //TODO: validate request
-            bool result = encodingService.CreateEncoding(request.knownPersonEmail, request.image);
-            if (result)
+            if (EncodingValidator.ValidateCreateEncodingRequest(request.knownPersonEmail, request.image))
             {
-                return StatusCode(201);
+                bool result = encodingService.CreateEncoding(request.knownPersonEmail, request.image);
+                if (result)
+                {
+                    return StatusCode(201);
+                }
             }
+
             return BadRequest();
-            
+
         }
 
-        
+
 
 
     }

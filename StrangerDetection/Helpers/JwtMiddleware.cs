@@ -40,6 +40,7 @@ namespace StrangerDetection.Helpers
         {
             try
             {
+                //validate jwt token
                 var tokenHandler = new JwtSecurityTokenHandler();
                 var key = Encoding.ASCII.GetBytes(_appSetting.Secret);
                 tokenHandler.ValidateToken(token, new TokenValidationParameters
@@ -53,6 +54,7 @@ namespace StrangerDetection.Helpers
                 }, out SecurityToken validatedToken) ;
                 var jwtToken = (JwtSecurityToken)validatedToken;
                 var username = jwtToken.Claims.First(x=> x.Type == "username").Value;
+                //attach user_DTO to request object.
                 context.Items["User"] = userService.GetByUsername(username);
 
             }

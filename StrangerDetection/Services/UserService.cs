@@ -78,7 +78,7 @@ namespace StrangerDetection.Services
         //Create Account
         public bool CreateAccount(CreateAccountRequest reqObj)
         {
-            if (UserValidator.ValidationRequestObjForCreateAccount(reqObj) && !IsUsernameExisted(reqObj.Username))
+            if (UserValidator.ValidateRequestObjForCreate(reqObj) && !IsUsernameExisted(reqObj.Username))
             {
                 TblAccount account = new TblAccount
                 {
@@ -111,18 +111,22 @@ namespace StrangerDetection.Services
         //update account
         public bool UpdateAccount(UpdateAccountRequest obj)
         {
-            TblAccount account = context.TblAccounts.AsQueryable().Where(x => x.Username.Equals(obj.Username)).FirstOrDefault();
-            if (account != null)
+            if (UserValidator.ValidateRequestObjForUpdate(obj))
             {
-                account.ProfileImageName = obj.Image;
-                account.Password = obj.Password;
-                account.Name = obj.Fullname;
-                account.Address = obj.Address;
-                account.IdentificationCardFrontImageName = obj.FrontIdentity;
-                account.IdentificationCardBackImageName = obj.BackIdentity;
-                context.SaveChanges();
-                return true;
+                TblAccount account = context.TblAccounts.AsQueryable().Where(x => x.Username.Equals(obj.Username)).FirstOrDefault();
+                if (account != null)
+                {
+                    account.ProfileImageName = obj.Image;
+                    account.Password = obj.Password;
+                    account.Name = obj.Fullname;
+                    account.Address = obj.Address;
+                    account.IdentificationCardFrontImageName = obj.FrontIdentity;
+                    account.IdentificationCardBackImageName = obj.BackIdentity;
+                    context.SaveChanges();
+                    return true;
+                }
             }
+
             return false;
         }
 

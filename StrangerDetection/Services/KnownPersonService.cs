@@ -30,10 +30,11 @@ namespace StrangerDetection.Services
         }
         public bool CreateKnownPerson(TblKnownPerson person)
         {
-            if (KnowPersonValidator.ValidateCreateKnowPersonRequestObj(person.Name, person.Email))
+            //NOTE: moved validation to KnowPersonsController
+            this.context.Add<TblKnownPerson>(person);
+            int row = context.SaveChanges();
+            if (row > 0)
             {
-                this.context.Add<TblKnownPerson>(person);
-                context.SaveChanges();
                 return true;
             }
             return false;
@@ -66,14 +67,16 @@ namespace StrangerDetection.Services
 
         public bool UpdateKnownPerson(TblKnownPerson person)
         {
+            //NOTE: moved validation to KnowsPer
             TblKnownPerson exsitedPerson = context.TblKnownPeople.FirstOrDefault(p => p.Email.Equals(person.Email));
-            if (exsitedPerson != null && KnowPersonValidator.ValidateCreateKnowPersonRequestObj(person.Name, person.Email))
+
+            exsitedPerson.Address = person.Address;
+            exsitedPerson.Email = person.Email;
+            exsitedPerson.Name = person.Name;
+            exsitedPerson.PhoneNumber = person.PhoneNumber;
+            int row = context.SaveChanges();
+            if (row > 0)
             {
-                exsitedPerson.Address = person.Address;
-                exsitedPerson.Email = person.Email;
-                exsitedPerson.Name = person.Name;
-                exsitedPerson.PhoneNumber = person.PhoneNumber;
-                context.SaveChanges();
                 return true;
             }
             return false;
