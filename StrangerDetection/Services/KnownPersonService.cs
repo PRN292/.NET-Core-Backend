@@ -31,13 +31,31 @@ namespace StrangerDetection.Services
         public bool CreateKnownPerson(TblKnownPerson person)
         {
             //NOTE: moved validation to KnowPersonsController
-            this.context.Add<TblKnownPerson>(person);
-            int row = context.SaveChanges();
-            if (row > 0)
+            //NOTE: add validate duplicate knowperson email
+            bool result = IsEmailExisted(person);
+            if (result)
             {
-                return true;
+                this.context.Add<TblKnownPerson>(person);
+                int row = context.SaveChanges();
+                if (row > 0)
+                {
+                    return true;
+                }
             }
             return false;
+        }
+
+        private bool IsEmailExisted(TblKnownPerson person)
+        {
+            List<TblKnownPerson> knowPersonList = GetAllKnowPerson();
+            foreach (TblKnownPerson existedPerson in knowPersonList)
+            {
+                if (person.Email.Equals(existedPerson.Email))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         public bool DeleteKnownPerson(string email)

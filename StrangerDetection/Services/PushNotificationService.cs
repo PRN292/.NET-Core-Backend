@@ -16,39 +16,49 @@ namespace PushNotification.Web
             this.userService = userService;
         }
 
-        public async Task RegisterForPush(string username, string token)
+        Task IPushNotificationService.RegisterForPush(string username, string token)
         {
-            userService.RegisterPushFCM(new Models.User { UserName = username, Token = token });
-
-            if (token != null)
-            {
-                await SendNotification(new PushNotificationItem()
-                {
-                    Title = "Notification Test",
-                    Body = "Successfuly registered for push notifications"
-                });
-            }
+            throw new System.NotImplementedException();
         }
 
-        public async Task SendNotification(PushNotificationItem notification)
+        Task IPushNotificationService.SendNotification(PushNotificationItem notification)
         {
-            var users = userService.GetAll();
-
-            foreach (var token in users)
-            {
-                using (var fcm = new FcmSender(_serverKey, token.Username))
-                {
-                    await fcm.SendAsync(token.IdentificationCardBackImageName,//token
-                         new
-                         {
-                             notification = new
-                             {
-                                 title = notification.Title,
-                                 body = notification.Body
-                             },
-                         });
-                }
-            }
+            throw new System.NotImplementedException();
         }
+
+        //public async Task RegisterForPush(string username, string token)
+        //{
+        //    userService.RegisterPushFCM(new Models.User { UserName = username, Token = token });
+
+        //    if (token != null)
+        //    {
+        //        await SendNotification(new PushNotificationItem()
+        //        {
+        //            Title = "Notification Test",
+        //            Body = "Successfuly registered for push notifications"
+        //        });
+        //    }
+        //}
+
+        //public async Task SendNotification(PushNotificationItem notification)
+        //{
+        //    var users = userService.GetAll();
+
+        //    foreach (var token in users)
+        //    {
+        //        using (var fcm = new FcmSender(null, null))
+        //        {
+        //            await fcm.SendAsync(token.IdentificationCardBackImageName,//token
+        //                 new
+        //                 {
+        //                     notification = new
+        //                     {
+        //                         title = notification.Title,
+        //                         body = notification.Body
+        //                     },
+        //                 });
+        //        }
+        //    }
+        //}
     }
 }
