@@ -7,22 +7,34 @@ using StrangerDetection.Services;
 using StrangerDetection.Validators;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
+using Firebase.Auth;
+using Firebase.Storage;
+using Microsoft.AspNetCore.Hosting;
 
 namespace StrangerDetection.Controllers
 {
+
     [Route("/api/v1/[controller]")]
     [ApiController]
     public class KnownPersonsController : Controller
     {
+        private static string ApiKey = "AIzaSyASmQKmEj0zSq9sZbzodY-NS_SzUbBQnss";
+        private static string bucket = "gs://strangerdetection.appspot.com";
+        private static string AuthEmail = "bangmapleproject@gmail.com";
+        private static string AuthPassword = "13062000";
+        private readonly IWebHostEnvironment _env;
         private IKnownPersonService personService;
         private IEncodingService encodingService;
 
-        public KnownPersonsController(IKnownPersonService personService, IEncodingService encodingService)
+        public KnownPersonsController(IWebHostEnvironment env, IKnownPersonService personService, IEncodingService encodingService)
         {
             this.encodingService = encodingService;
             this.personService = personService;
+            _env = env;
         }
 
 
@@ -32,12 +44,35 @@ namespace StrangerDetection.Controllers
         {
             List<TblKnownPerson> knowPersonList = personService.GetAllKnowPerson();
             List<KnownPersonResponse> resultList = new List<KnownPersonResponse>();
+            FileStream fs;
+            FileStream ms;
             knowPersonList.ForEach(s =>
             {
                 List<EncodingResponse> encodingResponses = new List<EncodingResponse>();
                 s.TblEncodings.ToList().ForEach(e =>
                 {
                     //TODO: get image base64 from firebase
+                    string folderName = "Favicon";
+                    string path = Path.Combine(_env.WebRootPath, $"images/{folderName}");
+                    var auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
+                    var a =  auth.SignInWithEmailAndPasswordAsync(AuthEmail, AuthPassword).Result;
+                    
+                    var cancellation = new CancellationTokenSource();
+                    
+                    var task = new FirebaseStorage(
+                            bucket,
+                            new FirebaseStorageOptions
+                            {
+                                AuthTokenAsyncFactory = () => Task.FromResult(a.FirebaseToken),
+                                ThrowOnCancel = true // when you cancel the upload, exception is thrown. By default no exception is thrown
+                            })
+                        .Child($"aspcore.png")
+                        .GetDownloadUrlAsync().Result;
+                    Console.WriteLine(task);
+                    //task.Progress.ProgressChanged += (s, e) => Console.WriteLine($"Progress: {e.Percentage} %");
+
+
+
                     encodingResponses.Add(new EncodingResponse { ID = e.Id, image = e.ImageName });
                 });
                 resultList.Add(new KnownPersonResponse
