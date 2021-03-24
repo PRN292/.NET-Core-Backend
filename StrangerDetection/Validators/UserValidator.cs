@@ -23,10 +23,7 @@ namespace StrangerDetection.Validators
 
         public static bool ValidateRequestObjForUpdate(UpdateAccountRequest model)
         {
-            if (model.Username.Trim().Length == 0 || model.Password.Trim().Length == 0 ||
-                model.FrontIdentity.Trim().Length == 0 ||
-                model.BackIdentity.Trim().Length == 0 ||
-                model.Image.Trim().Length == 0)
+            if (model.Username.Trim().Length == 0 || model.Password.Trim().Length == 0)
             {
                 return false;
             }

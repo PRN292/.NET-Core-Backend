@@ -10,7 +10,7 @@ namespace StrangerDetection.Services
 {
     public class GRPCClient
     {
-        string serverAddr = "http://localhost:50052";
+        string serverAddr = "http://192.168.8.33:50052";
         private ProcessImage.ProcessImageClient client;
         private GrpcChannel grpcChannel;
 
