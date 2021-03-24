@@ -1,7 +1,10 @@
+using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
 using StrangerDetection.Helpers;
 using StrangerDetection.Models;
+using StrangerDetection.Models.Requests;
 
 namespace StrangerDetection.Repositories.impl
 {
@@ -18,5 +21,19 @@ namespace StrangerDetection.Repositories.impl
         {
             return GetById(username);
         }
+
+        public TblAccount Authenticate(AuthenticationRequest reqObj)
+        {
+           return _strangerDetectionContext.TblAccounts.AsQueryable().Where(account =>
+            account.Username.Equals(reqObj.Username) && account.Password.Equals(reqObj.Password))
+                .FirstOrDefault();
+        }
+
+        public TblAccount GetAccountByUsername(string username)
+        {
+            return _strangerDetectionContext.TblAccounts.AsQueryable().Where(x => x.Username.Equals(username)).FirstOrDefault();
+        }
+
+
     }
 }

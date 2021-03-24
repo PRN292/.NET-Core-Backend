@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.Options;
 using StrangerDetection.Helpers;
 using StrangerDetection.Models;
+using StrangerDetection.Repositories.Encoding;
 using StrangerDetection.Repositories.impl;
 using StrangerDetection.Repositories.KnownPerson;
 
@@ -16,6 +17,7 @@ namespace StrangerDetection.UnitOfWorks
         private readonly IOptions<AppSetting> _appSettings;
         private AccountsRepository _accountsRepository;
         private KnownPersonsRepository _knownPersonsRepository;
+        private EncodingRepository _encodingRepository;
 
         public UnitOfWork(StrangerDetectionContext context, IOptions<AppSetting> options)
         {
@@ -46,6 +48,19 @@ namespace StrangerDetection.UnitOfWorks
                 }
 
                 return _knownPersonsRepository;
+            }
+        }
+
+        public EncodingRepository EncodingRepository
+        {
+            get
+            {
+                if (_encodingRepository == null)
+                {
+                    _encodingRepository = new EncodingRepository(_strangerDetectionContext);
+                }
+
+                return _encodingRepository;
             }
         }
 

@@ -32,6 +32,11 @@ namespace StrangerDetection.Models
             }
         }
 
+        internal object List<T>()
+        {
+            throw new NotImplementedException();
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");

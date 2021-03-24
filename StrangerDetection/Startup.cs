@@ -15,6 +15,7 @@ using Google.Apis.Auth.OAuth2;
 using Microsoft.EntityFrameworkCore;
 using StrangerDetection.Services;
 using StrangerDetection.Helpers;
+using StrangerDetection.UnitOfWorks;
 
 namespace StrangerDetection
 {
@@ -24,7 +25,7 @@ namespace StrangerDetection
         {
           //  System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "Firebase Admin Key\\strangerdetection-firebase-adminsdk-ndswy-678c270870.json");
             Configuration = configuration;
-         //   Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "Firebase Admin Key\\strangerdetection-firebase-adminsdk-ndswy-678c270870.json");
+           Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "Firebase Admin Key\\strangerdetection-firebase-adminsdk-ndswy-678c270870.json");
              FirebaseApp.Create(new AppOptions()
             {
                 Credential = GoogleCredential.GetApplicationDefault(),
@@ -43,6 +44,7 @@ namespace StrangerDetection
             services.Configure<AppSetting>(Configuration.GetSection("AppSettings"));
             services.AddDbContext<StrangerDetectionContext>(
                 options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IKnownPersonService, KnownPersonService> ();
             services.AddScoped<IEncodingService, EncodingService>();

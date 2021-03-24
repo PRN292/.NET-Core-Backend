@@ -14,6 +14,8 @@ using System.Threading.Tasks;
 using Firebase.Auth;
 using Firebase.Storage;
 using Microsoft.AspNetCore.Hosting;
+using System.Net;
+using System.Net.Http;
 
 namespace StrangerDetection.Controllers
 {
@@ -23,7 +25,7 @@ namespace StrangerDetection.Controllers
     public class KnownPersonsController : Controller
     {
         private static string ApiKey = "AIzaSyASmQKmEj0zSq9sZbzodY-NS_SzUbBQnss";
-        private static string bucket = "gs://strangerdetection.appspot.com";
+        private static string bucket = "strangerdetection.appspot.com";
         private static string AuthEmail = "bangmapleproject@gmail.com";
         private static string AuthPassword = "13062000";
         private readonly IWebHostEnvironment _env;
@@ -36,7 +38,15 @@ namespace StrangerDetection.Controllers
             this.personService = personService;
             _env = env;
         }
-
+        public async static Task<string> GetImageAsBase64Url(string url)
+        {
+            using (var handler = new HttpClientHandler())
+            using (var client = new HttpClient(handler))
+            {
+                var bytes = await client.GetByteArrayAsync(url);
+                return "image/png;base64," + Convert.ToBase64String(bytes);
+            }
+        }
 
         [Authorize(Constant.Role.ADMIN)]
         [HttpGet]
@@ -44,36 +54,23 @@ namespace StrangerDetection.Controllers
         {
             List<TblKnownPerson> knowPersonList = personService.GetAllKnowPerson();
             List<KnownPersonResponse> resultList = new List<KnownPersonResponse>();
-            FileStream fs;
-            FileStream ms;
+            var auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
+            var a = auth.SignInWithEmailAndPasswordAsync(AuthEmail, AuthPassword).Result;
+            var storage = new FirebaseStorage(
+                        bucket,
+                        new FirebaseStorageOptions
+                        {
+                            AuthTokenAsyncFactory = () => Task.FromResult(a.FirebaseToken),
+                            ThrowOnCancel = true // when you cancel the upload, exception is thrown. By default no exception is thrown
+                        });
             knowPersonList.ForEach(s =>
             {
                 List<EncodingResponse> encodingResponses = new List<EncodingResponse>();
                 s.TblEncodings.ToList().ForEach(e =>
                 {
-                    //TODO: get image base64 from firebase
-                    string folderName = "Favicon";
-                    string path = Path.Combine(_env.WebRootPath, $"images/{folderName}");
-                    var auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
-                    var a =  auth.SignInWithEmailAndPasswordAsync(AuthEmail, AuthPassword).Result;
-                    
-                    var cancellation = new CancellationTokenSource();
-                    
-                    var task = new FirebaseStorage(
-                            bucket,
-                            new FirebaseStorageOptions
-                            {
-                                AuthTokenAsyncFactory = () => Task.FromResult(a.FirebaseToken),
-                                ThrowOnCancel = true // when you cancel the upload, exception is thrown. By default no exception is thrown
-                            })
-                        .Child($"aspcore.png")
-                        .GetDownloadUrlAsync().Result;
-                    Console.WriteLine(task);
-                    //task.Progress.ProgressChanged += (s, e) => Console.WriteLine($"Progress: {e.Percentage} %");
-
-
-
-                    encodingResponses.Add(new EncodingResponse { ID = e.Id, image = e.ImageName });
+                    var task = storage.Child(e.ImageName)
+                    .GetDownloadUrlAsync().Result;
+                    encodingResponses.Add(new EncodingResponse { ID = e.Id, image = GetImageAsBase64Url(task).Result});
                 });
                 resultList.Add(new KnownPersonResponse
                 {
@@ -94,10 +91,20 @@ namespace StrangerDetection.Controllers
         {
             TblKnownPerson knownPerson = personService.GetKnownPersonByEmail(email);
             List<EncodingResponse> encodingResponses = new List<EncodingResponse>();
+            var auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
+            var a = auth.SignInWithEmailAndPasswordAsync(AuthEmail, AuthPassword).Result;
+            var storage = new FirebaseStorage(
+                        bucket,
+                        new FirebaseStorageOptions
+                        {
+                            AuthTokenAsyncFactory = () => Task.FromResult(a.FirebaseToken),
+                            ThrowOnCancel = true // when you cancel the upload, exception is thrown. By default no exception is thrown
+                        });
             knownPerson.TblEncodings.ToList().ForEach(e =>
             {
-                //TODO: get image base64 from firebase
-                encodingResponses.Add(new EncodingResponse { ID = e.Id, image = e.ImageName });
+                    var task = storage.Child(e.ImageName)
+                    .GetDownloadUrlAsync().Result;
+                encodingResponses.Add(new EncodingResponse { ID = e.Id, image = GetImageAsBase64Url(task).Result });
             });
             KnownPersonResponse response = new KnownPersonResponse
             {
@@ -172,7 +179,13 @@ namespace StrangerDetection.Controllers
         [Route("Encodings")]
         public IActionResult DeleteEncodingByID(string ID)
         {
-            return Ok(new { message = "Delete encoding successfully"});
+            bool result = encodingService.DeleteEncoding(ID);
+            if (result == true)
+            {
+                return Ok(new { message = "Delete encoding successfully" });
+
+            }
+            return BadRequest(new { message = "Delete encoding failed" });
         }
 
         [Authorize(Constant.Role.ADMIN)]
