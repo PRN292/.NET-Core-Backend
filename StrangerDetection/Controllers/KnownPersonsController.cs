@@ -79,10 +79,8 @@ namespace StrangerDetection.Controllers
         [HttpPatch]
         public IActionResult UpdateKnownPerson(UpdateKnownPersonRequest request)
         {
-            //TODO: validate request
             if (KnowPersonValidator.ValidateUpdateKnowPersonRequestObj(request))
             {
-                //
                 TblKnownPerson newPerson = new TblKnownPerson
                 {
                     Address = request.address,
@@ -104,7 +102,6 @@ namespace StrangerDetection.Controllers
         [HttpPost]
         public IActionResult CreateKnownPerson(CreateKnownPersonRequest request)
         {
-            //TODO: validate request
             if (KnowPersonValidator.ValidateCreateKnowPersonRequestObj(request))
             {
                 TblKnownPerson newPerson = new TblKnownPerson
@@ -147,7 +144,6 @@ namespace StrangerDetection.Controllers
         [HttpPost("encodings")]
         public IActionResult CreateNewEncoding(CreateEncodingRequest request)
         {
-            //TODO: validate request
             if (EncodingValidator.ValidateCreateEncodingRequest(request.knownPersonEmail, request.image))
             {
                 bool result = encodingService.CreateEncoding(request.knownPersonEmail, request.image);

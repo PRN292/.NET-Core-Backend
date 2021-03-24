@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bangmaple/NET_backend/StrangerDetection/StrangerDetection.csproj": {}
+    "D:\\Git Clone\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj": {}
   },
   "projects": {
-    "/Users/bangmaple/NET_backend/StrangerDetection/StrangerDetection.csproj": {
+    "D:\\Git Clone\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bangmaple/NET_backend/StrangerDetection/StrangerDetection.csproj",
+        "projectUniqueName": "D:\\Git Clone\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj",
         "projectName": "StrangerDetection",
-        "projectPath": "/Users/bangmaple/NET_backend/StrangerDetection/StrangerDetection.csproj",
-        "packagesPath": "/Users/bangmaple/.nuget/packages/",
-        "outputPath": "/Users/bangmaple/NET_backend/StrangerDetection/obj/",
+        "projectPath": "D:\\Git Clone\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "D:\\Git Clone\\.NET_BackEnd\\StrangerDetection\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/bangmaple/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -97,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
