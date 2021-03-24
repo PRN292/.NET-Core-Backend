@@ -301,185 +301,187 @@ D:/.NET_BackEnd/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.genr
 /Users/bangmaple/NET_backend/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.RazorTargetAssemblyInfo.cache
 /Users/bangmaple/NET_backend/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.csproj.CopyComplete
 /Users/bangmaple/NET_backend/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.genruntimeconfig.cache
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\appsettings.Development.json
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\appsettings.json
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Firebase Admin Key\strangerdetection-firebase-adminsdk-ndswy-678c270870.json
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\StrangerDetection.exe
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\StrangerDetection.deps.json
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\StrangerDetection.runtimeconfig.json
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\StrangerDetection.runtimeconfig.dev.json
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\StrangerDetection.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\StrangerDetection.pdb
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\FirebaseAdmin.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Api.CommonProtos.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Api.Gax.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Api.Gax.Grpc.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Api.Gax.Grpc.GrpcCore.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Api.Gax.Rest.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Apis.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Apis.Auth.PlatformServices.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Apis.Auth.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Apis.Core.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Cloud.Firestore.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Cloud.Firestore.V1.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Google.LongRunning.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Grpc.Auth.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Grpc.Core.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Grpc.Core.Api.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Humanizer.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\System.Linq.Async.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\linux\native\libgrpc_csharp_ext.x64.so
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\linux\native\libgrpc_csharp_ext.x86.so
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\osx\native\libgrpc_csharp_ext.x64.dylib
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\osx\native\libgrpc_csharp_ext.x86.dylib
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win\native\grpc_csharp_ext.x64.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win\native\grpc_csharp_ext.x86.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.AssemblyInfoInputs.cache
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.AssemblyInfo.cs
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.csproj.CoreCompileInputs.cache
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.MvcApplicationPartsAssemblyInfo.cache
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\obj\Debug\netcoreapp3.1\staticwebassets\StrangerDetection.StaticWebAssets.Manifest.cache
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\obj\Debug\netcoreapp3.1\staticwebassets\StrangerDetection.StaticWebAssets.xml
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\obj\Debug\netcoreapp3.1\scopedcss\bundle\StrangerDetection.styles.css
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.RazorTargetAssemblyInfo.cache
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.csproj.CopyComplete
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.pdb
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.genruntimeconfig.cache
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Grpc.Net.Client.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\bin\Debug\netcoreapp3.1\Grpc.Net.Common.dll
-D:\SE_Study\21_Spring\PRN292\Project\StrangerDetection\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.csprojAssemblyReference.cache
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\appsettings.Development.json
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\appsettings.json
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Firebase Admin Key\strangerdetection-firebase-adminsdk-ndswy-678c270870.json
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\StrangerDetection.exe
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\StrangerDetection.deps.json
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\StrangerDetection.runtimeconfig.json
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\StrangerDetection.runtimeconfig.dev.json
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\StrangerDetection.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\StrangerDetection.pdb
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\FirebaseAdmin.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Api.CommonProtos.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Api.Gax.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Api.Gax.Grpc.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Api.Gax.Grpc.GrpcCore.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Api.Gax.Rest.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Apis.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Apis.Auth.PlatformServices.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Apis.Auth.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Apis.Core.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Cloud.Firestore.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Cloud.Firestore.V1.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Google.LongRunning.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Grpc.Auth.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Grpc.Core.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Grpc.Core.Api.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Grpc.Net.Client.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Grpc.Net.Common.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Humanizer.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\System.Linq.Async.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\linux\native\libgrpc_csharp_ext.x64.so
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\linux\native\libgrpc_csharp_ext.x86.so
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\osx\native\libgrpc_csharp_ext.x64.dylib
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\osx\native\libgrpc_csharp_ext.x86.dylib
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win\native\grpc_csharp_ext.x64.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win\native\grpc_csharp_ext.x86.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.csprojAssemblyReference.cache
-D:\Git Clone\.NET_BackEnd\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.AssemblyInfoInputs.cache
-D:\Git Clone\.NET_BackEnd\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.AssemblyInfo.cs
-D:\Git Clone\.NET_BackEnd\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.csproj.CoreCompileInputs.cache
-D:\Git Clone\.NET_BackEnd\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.MvcApplicationPartsAssemblyInfo.cache
-D:\Git Clone\.NET_BackEnd\StrangerDetection\obj\Debug\netcoreapp3.1\staticwebassets\StrangerDetection.StaticWebAssets.Manifest.cache
-D:\Git Clone\.NET_BackEnd\StrangerDetection\obj\Debug\netcoreapp3.1\staticwebassets\StrangerDetection.StaticWebAssets.xml
-D:\Git Clone\.NET_BackEnd\StrangerDetection\obj\Debug\netcoreapp3.1\scopedcss\bundle\StrangerDetection.styles.css
-D:\Git Clone\.NET_BackEnd\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.RazorTargetAssemblyInfo.cache
-D:\Git Clone\.NET_BackEnd\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.csproj.CopyComplete
-D:\Git Clone\.NET_BackEnd\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.dll
-D:\Git Clone\.NET_BackEnd\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.pdb
-D:\Git Clone\.NET_BackEnd\StrangerDetection\obj\Debug\netcoreapp3.1\StrangerDetection.genruntimeconfig.cache
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/appsettings.Development.json
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/appsettings.json
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Firebase Admin Key/strangerdetection-firebase-adminsdk-ndswy-678c270870.json
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/StrangerDetection.exe
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/StrangerDetection.deps.json
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/StrangerDetection.runtimeconfig.json
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/StrangerDetection.runtimeconfig.dev.json
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/StrangerDetection.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/StrangerDetection.pdb
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/FirebaseAdmin.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Api.CommonProtos.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Api.Gax.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Api.Gax.Grpc.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Api.Gax.Grpc.GrpcCore.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Api.Gax.Rest.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Apis.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Apis.Auth.PlatformServices.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Apis.Auth.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Apis.Core.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Cloud.Firestore.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Cloud.Firestore.V1.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Google.LongRunning.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Protobuf.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Grpc.Auth.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Grpc.Core.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Grpc.Core.Api.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Humanizer.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.SqlServer.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Identity.Client.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/System.ComponentModel.Annotations.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/System.Linq.Async.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/System.Runtime.Caching.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/linux/native/libgrpc_csharp_ext.x64.so
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/linux/native/libgrpc_csharp_ext.x86.so
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/osx/native/libgrpc_csharp_ext.x64.dylib
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/osx/native/libgrpc_csharp_ext.x86.dylib
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win/native/grpc_csharp_ext.x64.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win/native/grpc_csharp_ext.x86.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.pdb
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.pdb
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.pdb
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.pdb
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.AssemblyInfoInputs.cache
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.AssemblyInfo.cs
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.csproj.CoreCompileInputs.cache
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.MvcApplicationPartsAssemblyInfo.cache
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/obj/Debug/netcoreapp3.1/staticwebassets/StrangerDetection.StaticWebAssets.Manifest.cache
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/obj/Debug/netcoreapp3.1/staticwebassets/StrangerDetection.StaticWebAssets.xml
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/obj/Debug/netcoreapp3.1/scopedcss/bundle/StrangerDetection.styles.css
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.RazorTargetAssemblyInfo.cache
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.csproj.CopyComplete
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.pdb
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.genruntimeconfig.cache
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Grpc.Net.Client.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/bin/Debug/netcoreapp3.1/Grpc.Net.Common.dll
+D:/SE_Study/21_Spring/PRN292/Project/StrangerDetection/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.csprojAssemblyReference.cache
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/appsettings.Development.json
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/appsettings.json
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Firebase Admin Key/strangerdetection-firebase-adminsdk-ndswy-678c270870.json
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/StrangerDetection.exe
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/StrangerDetection.deps.json
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/StrangerDetection.runtimeconfig.json
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/StrangerDetection.runtimeconfig.dev.json
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/StrangerDetection.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/StrangerDetection.pdb
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/FirebaseAdmin.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Api.CommonProtos.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Api.Gax.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Api.Gax.Grpc.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Api.Gax.Grpc.GrpcCore.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Api.Gax.Rest.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Apis.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Apis.Auth.PlatformServices.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Apis.Auth.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Apis.Core.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Cloud.Firestore.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Cloud.Firestore.V1.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Google.LongRunning.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Google.Protobuf.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Grpc.Auth.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Grpc.Core.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Grpc.Core.Api.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Grpc.Net.Client.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Grpc.Net.Common.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Humanizer.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.SqlServer.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.Identity.Client.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/System.ComponentModel.Annotations.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/System.Linq.Async.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/System.Runtime.Caching.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/linux/native/libgrpc_csharp_ext.x64.so
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/linux/native/libgrpc_csharp_ext.x86.so
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/osx/native/libgrpc_csharp_ext.x64.dylib
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/osx/native/libgrpc_csharp_ext.x86.dylib
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win/native/grpc_csharp_ext.x64.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win/native/grpc_csharp_ext.x86.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.pdb
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.pdb
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.pdb
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.pdb
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.csprojAssemblyReference.cache
+D:/Git Clone/.NET_BackEnd/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.AssemblyInfoInputs.cache
+D:/Git Clone/.NET_BackEnd/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.AssemblyInfo.cs
+D:/Git Clone/.NET_BackEnd/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.csproj.CoreCompileInputs.cache
+D:/Git Clone/.NET_BackEnd/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.MvcApplicationPartsAssemblyInfo.cache
+D:/Git Clone/.NET_BackEnd/StrangerDetection/obj/Debug/netcoreapp3.1/staticwebassets/StrangerDetection.StaticWebAssets.Manifest.cache
+D:/Git Clone/.NET_BackEnd/StrangerDetection/obj/Debug/netcoreapp3.1/staticwebassets/StrangerDetection.StaticWebAssets.xml
+D:/Git Clone/.NET_BackEnd/StrangerDetection/obj/Debug/netcoreapp3.1/scopedcss/bundle/StrangerDetection.styles.css
+D:/Git Clone/.NET_BackEnd/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.RazorTargetAssemblyInfo.cache
+D:/Git Clone/.NET_BackEnd/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.csproj.CopyComplete
+D:/Git Clone/.NET_BackEnd/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.dll
+D:/Git Clone/.NET_BackEnd/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.pdb
+D:/Git Clone/.NET_BackEnd/StrangerDetection/obj/Debug/netcoreapp3.1/StrangerDetection.genruntimeconfig.cache
+/Users/bangmaple/NET_backend/StrangerDetection/bin/Debug/netcoreapp3.1/Grpc.Net.Client.dll
+/Users/bangmaple/NET_backend/StrangerDetection/bin/Debug/netcoreapp3.1/Grpc.Net.Common.dll

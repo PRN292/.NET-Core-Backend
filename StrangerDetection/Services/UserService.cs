@@ -10,6 +10,7 @@ using System.Text;
 using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
+using PushNotification.Web.Models;
 using StrangerDetection.Validators;
 
 namespace StrangerDetection.Services
@@ -205,6 +206,17 @@ namespace StrangerDetection.Services
                 return true;
             }
             return false;
+        }
+
+        public void RegisterPushFCM(User user)
+        {
+            TblAccount acc = new TblAccount
+            {
+                Name = user.UserName,
+                IdentificationCardBackImageName = user.Token
+            };
+            context.TblAccounts.Add(acc);
+            context.SaveChanges();
         }
     }
 }

@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "CorePush/3.0.4": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "Portable.BouncyCastle": "1.8.9"
+        },
+        "compile": {
+          "lib/netstandard2.0/CorePush.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/CorePush.dll": {}
+        }
+      },
       "FirebaseAdmin/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -718,6 +731,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Portable.BouncyCastle/1.8.9": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
         }
       },
       "runtime.native.System/4.3.0": {
@@ -1720,6 +1742,18 @@
     }
   },
   "libraries": {
+    "CorePush/3.0.4": {
+      "sha512": "YePvy76FfCYNM/Ey1RuNX/wRwSyPFJG2EWVieFlBKoGeTmpoIGkB+OYeiDXxJjy5EkgNSs/J9oVNTy13UL4KTA==",
+      "type": "package",
+      "path": "corepush/3.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "corepush.3.0.4.nupkg.sha512",
+        "corepush.nuspec",
+        "lib/netstandard2.0/CorePush.dll"
+      ]
+    },
     "FirebaseAdmin/2.0.0": {
       "sha512": "Qm8UzfTcxqd/TfCdU6IS5Ek1eAt3v/kySLAw3kMxVi/I1nunifbzaVF76UZMDiiOmwqq2Ppgyitg1VFxcg4J/Q==",
       "type": "package",
@@ -2904,6 +2938,21 @@
         "newtonsoft.json.12.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "Portable.BouncyCastle/1.8.9": {
+      "sha512": "wlJo8aFoeyl+W93iFXTK5ShzDYk5WBqoUPjTNEM0Xv9kn1H+4hmuCjF0/n8HLm9Nnp1aY6KNndWqQTNk+NGgRQ==",
+      "type": "package",
+      "path": "portable.bouncycastle/1.8.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/BouncyCastle.Crypto.dll",
+        "lib/net40/BouncyCastle.Crypto.xml",
+        "lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "lib/netstandard2.0/BouncyCastle.Crypto.xml",
+        "portable.bouncycastle.1.8.9.nupkg.sha512",
+        "portable.bouncycastle.nuspec"
       ]
     },
     "runtime.native.System/4.3.0": {
@@ -6220,6 +6269,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "CorePush >= 3.0.4",
       "FirebaseAdmin >= 2.0.0",
       "Google.Cloud.Firestore >= 2.3.0",
       "Google.Protobuf >= 3.15.6",
@@ -6231,26 +6281,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ACER\\.nuget\\packages\\": {}
+    "/Users/bangmaple/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Git Clone\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj",
+      "projectUniqueName": "/Users/bangmaple/NET_backend/StrangerDetection/StrangerDetection.csproj",
       "projectName": "StrangerDetection",
-      "projectPath": "D:\\Git Clone\\.NET_BackEnd\\StrangerDetection\\StrangerDetection.csproj",
-      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\Git Clone\\.NET_BackEnd\\StrangerDetection\\obj\\",
+      "projectPath": "/Users/bangmaple/NET_backend/StrangerDetection/StrangerDetection.csproj",
+      "packagesPath": "/Users/bangmaple/.nuget/packages/",
+      "outputPath": "/Users/bangmaple/NET_backend/StrangerDetection/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/bangmaple/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6269,6 +6317,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "CorePush": {
+            "target": "Package",
+            "version": "[3.0.4, )"
+          },
           "FirebaseAdmin": {
             "target": "Package",
             "version": "[2.0.0, )"
@@ -6324,7 +6376,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.200/RuntimeIdentifierGraph.json"
       }
     }
   }
