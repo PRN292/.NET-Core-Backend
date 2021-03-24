@@ -91,11 +91,11 @@ namespace StrangerDetection.Controllers
                 bool result = personService.UpdateKnownPerson(newPerson);
                 if (result)
                 {
-                    return Ok();
+                    return Ok(new { message = "Update knownperson successfully"});
                 }
             }
 
-            return BadRequest();
+            return BadRequest(new { message = "Update knownperson failed"});
         }
 
         [Authorize(Constant.Role.ADMIN)]
@@ -112,9 +112,9 @@ namespace StrangerDetection.Controllers
                     PhoneNumber = request.phoneNumber
                 };
                 bool result = personService.CreateKnownPerson(newPerson);
-                return Ok(result);
+                return Ok(new { message = "Create knownperson successfully"});
             }
-            return BadRequest();
+            return BadRequest(new { message = "Create knownperson failed" });
 
         }
 
@@ -125,9 +125,9 @@ namespace StrangerDetection.Controllers
             bool result = personService.DeleteKnownPerson(email);
             if (result)
             {
-                return Ok();
+                return Ok(new { message = "Delete knowperson successfully"});
             }
-            return BadRequest();
+            return BadRequest(new { message = "Delete knownperson failed"});
         }
 
 
@@ -137,7 +137,7 @@ namespace StrangerDetection.Controllers
         [Route("Encodings")]
         public IActionResult DeleteEncodingByID(string ID)
         {
-            return Ok();
+            return Ok(new { message = "Delete encoding successfully"});
         }
 
         [Authorize(Constant.Role.ADMIN)]
@@ -153,7 +153,7 @@ namespace StrangerDetection.Controllers
                 }
             }
 
-            return BadRequest();
+            return BadRequest(new { message = "Create encoding failed"});
 
         }
 

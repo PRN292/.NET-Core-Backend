@@ -53,7 +53,7 @@ namespace StrangerDetection.Controllers
             bool result = userService.LogoutUser(username);
             if (result)
             {
-                return Ok();
+                return Ok(new { message = "Logout successfully"});
             }
             return BadRequest(new { message = "Logout failed" });
         }
@@ -89,7 +89,7 @@ namespace StrangerDetection.Controllers
             bool result = userService.UpdateAccount(obj);
             if (result)
             {
-                return Ok("Updated!");
+                return Ok(new { message = "Update account successfully." });
             }
             return BadRequest(new { message = "Account doesn't exist. Update failed" });
         }
@@ -101,7 +101,7 @@ namespace StrangerDetection.Controllers
             bool result = userService.DeleteAccount(username);
             if (result)
             {
-                return Ok("Deleted!");
+                return Ok(new { message = "Delete account successfully" });
             }
             return BadRequest(new { message = "Account doesn't exist. Delete Failed" });
         }
