@@ -16,6 +16,10 @@ using Microsoft.EntityFrameworkCore;
 using StrangerDetection.Services;
 using StrangerDetection.Helpers;
 using StrangerDetection.UnitOfWorks;
+using StrangerDetection.Repositories.impl;
+using StrangerDetection.Repositories.KnownPerson;
+using StrangerDetection.Repositories.Encoding;
+using StrangerDetection.Repositories;
 
 namespace StrangerDetection
 {
@@ -48,6 +52,11 @@ namespace StrangerDetection
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IKnownPersonService, KnownPersonService> ();
             services.AddScoped<IEncodingService, EncodingService>();
+            services.AddScoped<IAccountsRepository, AccountsRepository>();
+            services.AddScoped<IKnownPersonsRepository, KnownPersonsRepository>();
+
+            services.AddScoped<IEncodingRepository, EncodingRepository>();
+
             services.AddScoped<GRPCClient>();
         }
 

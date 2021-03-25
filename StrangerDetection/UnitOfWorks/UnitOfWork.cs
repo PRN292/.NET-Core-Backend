@@ -22,6 +22,7 @@ namespace StrangerDetection.UnitOfWorks
         public UnitOfWork(StrangerDetectionContext context, IOptions<AppSetting> options)
         {
             _strangerDetectionContext = context;
+            System.Console.WriteLine(context); 
             _appSettings = options;
         }
 

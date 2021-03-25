@@ -12,6 +12,7 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using PushNotification.Web.Models;
 using StrangerDetection.Validators;
+using StrangerDetection.UnitOfWorks;
 
 namespace StrangerDetection.Services
 {
@@ -41,9 +42,11 @@ namespace StrangerDetection.Services
         private readonly AppSetting appSetting;
         private readonly StrangerDetectionContext context;
         private readonly UserValidator validator;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public UserService(IOptions<AppSetting> appSetting, StrangerDetectionContext context)
+        public UserService(IOptions<AppSetting> appSetting, StrangerDetectionContext context, IUnitOfWork unitOfWork)
         {
+            _unitOfWork = unitOfWork;
             this.appSetting = appSetting.Value;
             this.context = context;
         }
@@ -65,13 +68,12 @@ namespace StrangerDetection.Services
         //login
         public AuthenticationResponse Authenticate(AuthenticationRequest reqObj)
         {
-            var user = context.TblAccounts.AsQueryable().Where(account =>
-            account.Username.Equals(reqObj.Username) && account.Password.Equals(reqObj.Password))
-                .FirstOrDefault();
+
+            var user = _unitOfWork.AccountsRepository.Authenticate(reqObj);
             if (user == null) return null;
             var token = generateJwtToken(user);
             user.IsLogin = true;
-            context.SaveChanges();
+            _unitOfWork.Save().Wait();
             return new AuthenticationResponse(user, token);
 
         }
