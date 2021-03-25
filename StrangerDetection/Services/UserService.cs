@@ -94,6 +94,7 @@ namespace StrangerDetection.Services
                     ProfileImageName = reqObj.Image,
                     RoleId = reqObj.RoleID
                 };
+               // _unitOfWork.AccountsRepository.Create(account);
                 context.TblAccounts.Add(account);
                 context.SaveChanges();
                 return true;

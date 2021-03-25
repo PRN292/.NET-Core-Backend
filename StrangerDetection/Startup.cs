@@ -48,14 +48,15 @@ namespace StrangerDetection
             services.Configure<AppSetting>(Configuration.GetSection("AppSettings"));
             services.AddDbContext<StrangerDetectionContext>(
                 options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<AccountsRepository>();
+            services.AddScoped<KnownPersonsRepository>();
+
+            services.AddScoped<EncodingRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IKnownPersonService, KnownPersonService> ();
             services.AddScoped<IEncodingService, EncodingService>();
-            services.AddScoped<IAccountsRepository, AccountsRepository>();
-            services.AddScoped<IKnownPersonsRepository, KnownPersonsRepository>();
-
-            services.AddScoped<IEncodingRepository, EncodingRepository>();
+            
 
             services.AddScoped<GRPCClient>();
         }

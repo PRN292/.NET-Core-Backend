@@ -19,12 +19,15 @@ namespace StrangerDetection.UnitOfWorks
         private KnownPersonsRepository _knownPersonsRepository;
         private EncodingRepository _encodingRepository;
 
-        public UnitOfWork(StrangerDetectionContext context, IOptions<AppSetting> options)
+        public UnitOfWork(StrangerDetectionContext context, IOptions<AppSetting> options,AccountsRepository accountsRepository,
+            KnownPersonsRepository knownPersonsRepository, EncodingRepository encodingRepository)
         {
             _strangerDetectionContext = context;
-            System.Console.WriteLine(context); 
             _appSettings = options;
-        }
+                     _accountsRepository=accountsRepository;
+         _knownPersonsRepository =knownPersonsRepository;
+            _encodingRepository = encodingRepository;
+    }
 
         public AccountsRepository AccountsRepository
         {
